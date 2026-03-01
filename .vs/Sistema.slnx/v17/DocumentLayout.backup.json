@@ -1,0 +1,472 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|c:\\users\\admin\\onedrive\\escritorio\\ucenm\\x period\\sistema\\sistema\\sistema\\formularios\\formpacientes\\pacientesform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formpacientes\\pacientesform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formpacientes\\pacientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formpacientes\\pacientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:README.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formusuarios\\formcrearusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formusuarios\\formcrearusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formusuarios\\formcrearusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formusuarios\\formcrearusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\GUIA_SEGURIDAD.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:GUIA_SEGURIDAD.md||{EFC0BB08-EA7D-40C6-A696-C870411A895B}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formpacientes\\pacientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formpacientes\\pacientesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formdentistas\\especialidadesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formdentistas\\especialidadesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claseusuarios\\guardarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claseusuarios\\guardarusuarios.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claselogin\\verificarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claselogin\\verificarcontrase\u00F1a.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formloginmenu\\iniciologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\iniciologo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formpacientes\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formpacientes\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claseusuarios\\salhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claseusuarios\\salhash.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claseusuarios\\usuariologeado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claseusuarios\\usuariologeado.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claseconexionsql\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claseconexionsql\\conexion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\clasealertas\\alertasdelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\clasealertas\\alertasdelsistema.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formdentistas\\especialidadesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formdentistas\\especialidadesform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formdentistas\\dentistasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formdentistas\\dentistasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\clases\\claselogin\\consultarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\clases\\claselogin\\consultarusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formpacientes\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formpacientes\\citasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\sistema\\formularios\\formdentistas\\dentistasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formdentistas\\dentistasform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 4,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "README.md",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\README.md",
+              "RelativeDocumentMoniker": "README.md",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\README.md",
+              "RelativeToolTip": "README.md",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA0AAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-01T03:19:47.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PacientesForm.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.Designer.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormPacientes\\PacientesForm.Designer.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.Designer.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormPacientes\\PacientesForm.Designer.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAABcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T03:20:50.141Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "PacientesForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T03:22:02.839Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "FormCrearUsuarios.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:32:04.198Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "FormCrearUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormUsuarios\\FormCrearUsuarios.cs",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAkwHoAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:32:21.022Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "GUIA_SEGURIDAD.md",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\GUIA_SEGURIDAD.md",
+              "RelativeDocumentMoniker": "GUIA_SEGURIDAD.md",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\GUIA_SEGURIDAD.md",
+              "RelativeToolTip": "GUIA_SEGURIDAD.md",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001818|",
+              "WhenOpened": "2026-03-01T03:28:06.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "PacientesForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormPacientes\\PacientesForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\PacientesForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormPacientes\\PacientesForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:35:09.763Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EspecialidadesForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T03:25:43.075Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "CitasForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T03:24:25.783Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "DentistasForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAxwBQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T03:25:11.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:35.438Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Program.cs",
+              "RelativeDocumentMoniker": "Sistema\\Program.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Program.cs",
+              "RelativeToolTip": "Sistema\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-01T01:53:18.967Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "GuardarUsuarios.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\GuardarUsuarios.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseUsuarios\\GuardarUsuarios.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\GuardarUsuarios.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseUsuarios\\GuardarUsuarios.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAAEoAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:57:14.624Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "InicioLOGO.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\InicioLOGO.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\InicioLOGO.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\InicioLOGO.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\InicioLOGO.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:32.649Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "App.config",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\App.config",
+              "RelativeDocumentMoniker": "Sistema\\App.config",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\App.config",
+              "RelativeToolTip": "Sistema\\App.config",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
+              "WhenOpened": "2026-03-01T01:54:40.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "MenuForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:39.692Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "VerificarContrase\u00F1a.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseLogin\\VerificarContrase\u00F1a.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseLogin\\VerificarContrase\u00F1a.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseLogin\\VerificarContrase\u00F1a.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseLogin\\VerificarContrase\u00F1a.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:00:29.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CitasForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormPacientes\\CitasForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormPacientes\\CitasForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormPacientes\\CitasForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:35:07.791Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "MenuForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
+              "ViewState": "AgIAAGIAAAAAAAAAAIAwwHEAAAAiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:04:40.759Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "SalHash.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\SalHash.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseUsuarios\\SalHash.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\SalHash.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseUsuarios\\SalHash.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:05:00.259Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "UsuarioLogeado.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\UsuarioLogeado.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseUsuarios\\UsuarioLogeado.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseUsuarios\\UsuarioLogeado.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseUsuarios\\UsuarioLogeado.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:06:19.942Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "Conexion.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseConexionSQL\\Conexion.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseConexionSQL\\Conexion.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseConexionSQL\\Conexion.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseConexionSQL\\Conexion.cs",
+              "ViewState": "AgIAADYAAAAAAAAAAAAYwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-25T00:05:17.969Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "AlertasDelSistema.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseAlertas\\AlertasDelSistema.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseAlertas\\AlertasDelSistema.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseAlertas\\AlertasDelSistema.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseAlertas\\AlertasDelSistema.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:03.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "EspecialidadesForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormDentistas\\EspecialidadesForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:17.71Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "DentistasForm.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormDentistas\\DentistasForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormDentistas\\DentistasForm.cs [Design]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormDentistas\\DentistasForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:15.296Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAYwEUAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:57:35.415Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "ConsultarUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseLogin\\ConsultarUsuario.cs",
+              "RelativeDocumentMoniker": "Sistema\\Clases\\ClaseLogin\\ConsultarUsuario.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Clases\\ClaseLogin\\ConsultarUsuario.cs",
+              "RelativeToolTip": "Sistema\\Clases\\ClaseLogin\\ConsultarUsuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:57:57.682Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Form1.cs",
+              "RelativeDocumentMoniker": "Sistema\\Form1.cs",
+              "ToolTip": "C:\\Users\\ADMIN\\OneDrive\\Escritorio\\UCENM\\X Period\\Sistema\\Sistema\\Sistema\\Form1.cs [Design]",
+              "RelativeToolTip": "Sistema\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-02-24T23:48:25.142Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

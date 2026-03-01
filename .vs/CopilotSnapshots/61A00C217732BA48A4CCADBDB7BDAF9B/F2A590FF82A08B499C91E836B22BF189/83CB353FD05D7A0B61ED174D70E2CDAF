@@ -1,0 +1,100 @@
+﻿using Sistema.Formularios;
+using Sistema.Formularios.FormUsuarios;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.FormLoginMenu
+{
+    public partial class MenuForm : Form
+    {
+        int m , mx, my;
+        public MenuForm()
+        {
+            InitializeComponent();
+        }
+
+        void AbrirFormEnPanel(object Formhijo)
+        {
+            if (this.panelContenedor.Controls.Count > 0)
+                this.panelContenedor.Controls.RemoveAt(0);
+            Form fh = Formhijo as Form;
+            fh.TopLevel = false;
+            fh.Dock = DockStyle.Fill;
+            this.panelContenedor.Controls.Add(fh);
+            this.panelContenedor.Tag = fh;
+            fh.Show();
+        }
+
+        void btnInteractivo(Form form)
+        {
+            //cambiar de color el boton seleccionado segun el formulario abierto
+
+        }
+
+        void newFomr(Form newFORM)
+        {
+            newFORM.ShowDialog();
+        }
+
+        private void inicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            newFomr(new FormCrearUsuarios());
+        }
+
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        {
+            m = 1;
+            mx = e.X;
+            my = e.Y;
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormCrearUsuarios());
+        }
+
+        private void btnInicioMenu_Click(object sender, EventArgs e)
+        {
+            //cierra formularios del panel
+            foreach (Form form in panelContenedor.Controls.OfType<Form>())
+            {
+                form.Close();
+            }
+        }
+
+        private void btnDentistas_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormDentistas());
+        }
+
+        private void panel2_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (m == 1)
+            {
+                this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
+            }
+        }
+
+        private void panel2_MouseUp(object sender, MouseEventArgs e)
+        {
+            m = 0;
+        }
+    }
+}

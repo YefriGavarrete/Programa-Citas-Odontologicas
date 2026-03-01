@@ -1,0 +1,245 @@
+﻿using Sistema.Clases;
+using Sistema.Clases.ClaseUsuarios;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Data.SqlClient;
+using System.Drawing;
+using System.Linq;
+using System.Security.Cryptography;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormUsuarios
+{
+    public partial class FormCrearUsuarios : Form
+    {
+        ConsultasSQL consulta = new ConsultasSQL();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+        Conexion conexion = new Conexion();
+        GuardarUsuarios guardarUsuarios = new GuardarUsuarios();
+
+        string estado = "";
+        string rol = "";
+
+        public FormCrearUsuarios()
+        {
+            InitializeComponent();
+            MostrarRegistros("Activo");
+            lblOperacion.Visible = false;
+            lblOperacion.Text = "Agregando";
+            rbActivos.Checked = true;
+        }
+
+
+        public string CrearNombreUsuario(string nombre, string apellido)
+        {
+            if (string.IsNullOrWhiteSpace(nombre) || string.IsNullOrWhiteSpace(apellido))
+                return string.Empty;
+
+            nombre = nombre.Trim();
+            apellido = apellido.Trim();
+
+            string fraccionNombre = nombre.Length >= 4 ? nombre.Substring(0, 4) : nombre;
+            string fraccionApellido = apellido.Length >= 4 ? apellido.Substring(0, 4) : apellido;
+            string nombreUsuario = (fraccionNombre + fraccionApellido).ToLower();
+
+            return nombreUsuario;
+        }
+
+        public void GenerarNombreUsuarioAutomatico()
+        {
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+
+            if (!string.IsNullOrEmpty(nombre) && !string.IsNullOrEmpty(apellido))
+            {
+                string usuarioGenerado = CrearNombreUsuario(nombre, apellido);
+                txtUsuario.Text = usuarioGenerado;
+            }
+        }
+
+        void Compartirdatos()
+        {
+            // obtener datos
+            int id = Convert.ToInt32(txtID.Text == string.Empty ? "0" : txtID.Text);
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+            string usuario = CrearNombreUsuario(nombre, apellido);
+            string clave = txtClave.Text;
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(clave))
+            {
+                Alertas.Advertencia("Por favor, complete todos los campos vacios.");
+                return;
+            }
+
+            if (chkEstado.Checked == true)
+                estado = "Activo";
+            else
+                estado = "Inactivo";
+
+            if (rbAdmin.Checked)
+            {
+                rol = "Administrador";
+            }
+            else if (rbRecepcion.Checked)
+            {
+                rol = "Recepcionista";
+            }
+            else
+            {
+                Alertas.Advertencia("Seleccione un rol antes de guardar.");
+                return;
+            }
+
+            guardarUsuarios.Guardar("UsuariosLogin",
+                                    id,
+                                    usuario,
+                                    nombre,
+                                    apellido,
+                                    clave,
+                                    dtpFecha.Value,
+                                    estado,
+                                    rol,
+                                    lblOperacion.Text)
+            ;
+            MostrarRegistros("Activo");
+            limpiarCampos();
+        }
+
+        public void limpiarCampos()
+        {
+            txtID.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtUsuario.Text = string.Empty;
+            txtClave.Text = string.Empty;
+            chkEstado.Checked = false;
+            chkMostrarClave.Checked = false;
+            rbAdmin.Checked = false;
+            rbRecepcion.Checked = false;
+        }
+
+        public void MostrarRegistros(string estado)
+        {
+            try
+
+            {
+                string columnas = "Id_User, Usuario, Nombre, Apellido, Fecha_Creacion, Estado, Rol";
+                string condicion = $"Estado = '{estado}'";
+                DataTable dt = consulta.Buscar("UsuariosLogin", columnas, condicion);
+                if (dt != null)
+                {
+                    if (dt.Columns.Contains("Clave")) dt.Columns.Remove("Clave");
+                    if (dt.Columns.Contains("Sal")) dt.Columns.Remove("Sal");
+                    if (dt.Columns.Contains("Iteraciones")) dt.Columns.Remove("Iteraciones");
+                }
+                dgvDatos.DataSource = dt;
+                dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvDatos.Refresh();
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar registros: {ex.Message}");
+            }
+        }
+
+        void EnviarDatosParaEditar(DataGridViewCellEventArgs e)
+        {
+            try
+            {               
+                lblOperacion.Text = "Editando";
+                lblOperacion.Visible = true;
+
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dgvDatos.Rows[e.RowIndex];
+                    txtID.Text = fila.Cells["Id_User"].Value.ToString();
+                    txtUsuario.Text = fila.Cells["Usuario"].Value.ToString();
+                    txtNombre.Text = fila.Cells["Nombre"].Value.ToString();
+                    txtApellido.Text = fila.Cells["Apellido"].Value.ToString();
+                    dtpFecha.Value = Convert.ToDateTime(fila.Cells["Fecha_Creacion"].Value);
+                    estado = fila.Cells["Estado"].Value.ToString();
+                    rol = fila.Cells["ROL"].Value.ToString();
+
+                    if (estado == "Activo")
+                        chkEstado.Checked = true;
+                    else
+                        chkEstado.Checked = false;
+
+                    if (rol == "Administrador")
+                        rbAdmin.Checked = true;
+                    else if (rol == "Recepcionista")
+                        rbRecepcion.Checked = true;
+
+                    string operacion = lblOperacion.Text;
+
+                    if (operacion == "Editando")
+                    {
+                        txtID.Enabled = false;
+                        txtUsuario.Enabled = false;
+                        txtClave.Enabled = true;
+                        txtUsuario.Enabled = false;
+                        txtNombre.Enabled = true;
+                        txtApellido.Enabled = true;
+                        //dtpFecha.Enabled = false;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+                lblOperacion.Visible = false;
+            }
+
+        }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            Compartirdatos();
+        }
+
+        private void dgvDatos_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
+        }
+
+        private void rbActivos_CheckedChanged(object sender, EventArgs e)
+        {
+            MostrarRegistros("Activo");
+        }
+
+        private void rbInactivos_CheckedChanged(object sender, EventArgs e)
+        {
+            MostrarRegistros("Inactivo");
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            limpiarCampos();
+             lblOperacion.Text = "Agregando";
+             lblOperacion.Visible = false;
+            rbActivos.Checked = true;
+            MostrarRegistros("Activo");
+        }
+
+        private void chkMostrarClave_CheckedChanged(object sender, EventArgs e)
+        {
+            txtClave.UseSystemPasswordChar = !chkMostrarClave.Checked;
+        }
+
+  
+        private void txtNombre_TextChanged_1(object sender, EventArgs e)
+        {
+            GenerarNombreUsuarioAutomatico();
+        }
+
+        private void txtApellido_TextChanged(object sender, EventArgs e)
+        {
+            GenerarNombreUsuarioAutomatico();   
+        }
+    }
+}

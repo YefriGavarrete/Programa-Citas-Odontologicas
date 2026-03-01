@@ -1,0 +1,252 @@
+﻿using Sistema.Clases;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormPacientes
+{
+    public partial class CitasForm : Form
+    {
+        // Controladores y Servicios
+        ConsultasSQL consulta = new ConsultasSQL();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+
+        string operacion = ""; // "Agregando" o "Editando"
+
+        public CitasForm()
+        {
+            InitializeComponent();
+            CargarComboBoxes();
+            MostrarCitas();
+        }
+
+        /// <summary>
+        /// Carga los datos en los ComboBox de Pacientes y Dentistas
+        /// </summary>
+        private void CargarComboBoxes()
+        {
+            try
+            {
+                // Cargar pacientes
+                DataTable dtPacientes = consulta.Buscar("Pacientes", "Id_Paciente, Nombre, Apellido");
+                if (dtPacientes != null && dtPacientes.Rows.Count > 0)
+                {
+                    cmbPaciente.DataSource = dtPacientes;
+                    cmbPaciente.DisplayMember = "Nombre";
+                    cmbPaciente.ValueMember = "Id_Paciente";
+                }
+
+                // Cargar dentistas
+                DataTable dtDentistas = consulta.Buscar("Dentistas", "Id_Dentista, Nombre, Apellido");
+                if (dtDentistas != null && dtDentistas.Rows.Count > 0)
+                {
+                    cmbDentista.DataSource = dtDentistas;
+                    cmbDentista.DisplayMember = "Nombre";
+                    cmbDentista.ValueMember = "Id_Dentista";
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Muestra la lista de citas en el DataGridView
+        /// </summary>
+        private void MostrarCitas()
+        {
+            try
+            {
+                string sql = @"SELECT c.Id_Cita, p.Nombre as Paciente, d.Nombre as Dentista, 
+                              c.Fecha_Cita, c.Hora_Cita, c.Estado, c.Notas
+                              FROM Citas c
+                              INNER JOIN Pacientes p ON c.Id_Paciente = p.Id_Paciente
+                              INNER JOIN Dentistas d ON c.Id_Dentista = d.Id_Dentista";
+
+                DataTable dt = consulta.EjecutarConsultaSelect(sql);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dgvCitas.DataSource = dt;
+                    dgvCitas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvCitas.Refresh();
+                }
+                else
+                {
+                    dgvCitas.DataSource = null;
+                    Alertas.Advertencia("No hay citas registradas.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar citas: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Recopia los datos del formulario y llama al controlador de guardado
+        /// </summary>
+        private void CompartirDatos()
+        {
+            try
+            {
+                // Validar campos no vacíos
+                if (cmbPaciente.SelectedValue == null ||
+                    cmbDentista.SelectedValue == null ||
+                    string.IsNullOrEmpty(cmbEstado.Text))
+                {
+                    Alertas.Advertencia("Por favor, complete todos los campos.");
+                    return;
+                }
+
+                int idCita = string.IsNullOrEmpty(txtID.Text) ? 0 : Convert.ToInt32(txtID.Text);
+                int idPaciente = Convert.ToInt32(cmbPaciente.SelectedValue);
+                int idDentista = Convert.ToInt32(cmbDentista.SelectedValue);
+                DateTime fechaCita = dtpFechaCita.Value;
+                DateTime horaCita = dtpHoraCita.Value;
+                string estado = cmbEstado.SelectedItem?.ToString() ?? "Pendiente";
+                string notas = txtNotas.Text.Trim();
+
+                GuardarCita(idCita, idPaciente, idDentista, fechaCita, horaCita, estado, notas);
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al procesar datos: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Guarda o actualiza una cita en la BD
+        /// </summary>
+        private void GuardarCita(int id, int idPaciente, int idDentista, DateTime fechaCita, 
+                                DateTime horaCita, string estado, string notas)
+        {
+            try
+            {
+                string sql = "";
+
+                if (operacion == "Editando")
+                {
+                    sql = $@"UPDATE Citas
+                             SET Id_Paciente = @IdPaciente,
+                                 Id_Dentista = @IdDentista,
+                                 Fecha_Cita = @FechaCita,
+                                 Hora_Cita = @HoraCita,
+                                 Estado = @Estado,
+                                 Notas = @Notas
+                             WHERE Id_Cita = {id}";
+                }
+                else
+                {
+                    sql = $@"INSERT INTO Citas
+                             (Id_Paciente, Id_Dentista, Fecha_Cita, Hora_Cita, Estado, Notas)
+                             VALUES
+                             (@IdPaciente, @IdDentista, @FechaCita, @HoraCita, @Estado, @Notas)";
+                }
+
+                using (var cmd = new System.Data.SqlClient.SqlCommand(sql))
+                {
+                    cmd.Parameters.AddWithValue("@IdPaciente", idPaciente);
+                    cmd.Parameters.AddWithValue("@IdDentista", idDentista);
+                    cmd.Parameters.AddWithValue("@FechaCita", fechaCita.Date);
+                    cmd.Parameters.AddWithValue("@HoraCita", horaCita);
+                    cmd.Parameters.AddWithValue("@Estado", estado);
+                    cmd.Parameters.AddWithValue("@Notas", string.IsNullOrEmpty(notas) ? DBNull.Value : (object)notas);
+
+                    int filas = consulta.EjecutarComando(cmd);
+
+                    if (filas > 0)
+                    {
+                        string mensaje = operacion == "Editando" ? "actualizo" : "agrego";
+                        Alertas.Realizado($"Cita se {mensaje} correctamente.");
+                        LimpiarCampos();
+                        MostrarCitas();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al guardar cita: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Limpia todos los campos del formulario
+        /// </summary>
+        private void LimpiarCampos()
+        {
+            txtID.Text = string.Empty;
+            cmbPaciente.SelectedIndex = 0;
+            cmbDentista.SelectedIndex = 0;
+            cmbEstado.SelectedIndex = -1;
+            dtpFechaCita.Value = DateTime.Now;
+            dtpHoraCita.Value = DateTime.Now;
+            txtNotas.Text = string.Empty;
+            operacion = "Agregando";
+        }
+
+        /// <summary>
+        /// Carga los datos de una cita al hacer doble clic en la tabla
+        /// </summary>
+        private void EnviarDatosParaEditar(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dgvCitas.Rows[e.RowIndex];
+                    operacion = "Editando";
+
+                    txtID.Text = fila.Cells["Id_Cita"].Value?.ToString() ?? "";
+                    txtNotas.Text = fila.Cells["Notas"].Value?.ToString() ?? "";
+
+                    // Cargar estado
+                    string estado = fila.Cells["Estado"].Value?.ToString() ?? "";
+                    if (!string.IsNullOrEmpty(estado))
+                    {
+                        cmbEstado.SelectedItem = estado;
+                    }
+
+                    // Cargar fecha y hora
+                    if (DateTime.TryParse(fila.Cells["Fecha_Cita"].Value?.ToString() ?? "", out DateTime fecha))
+                    {
+                        dtpFechaCita.Value = fecha;
+                    }
+
+                    if (DateTime.TryParse(fila.Cells["Hora_Cita"].Value?.ToString() ?? "", out DateTime hora))
+                    {
+                        dtpHoraCita.Value = hora;
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+            }
+        }
+
+        // Event Handlers
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CompartirDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            MostrarCitas();
+        }
+
+        private void dgvCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
+        }
+    }
+}

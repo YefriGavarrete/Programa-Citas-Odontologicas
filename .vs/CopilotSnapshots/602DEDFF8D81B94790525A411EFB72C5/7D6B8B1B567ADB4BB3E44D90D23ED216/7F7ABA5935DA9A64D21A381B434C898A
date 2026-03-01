@@ -1,0 +1,237 @@
+﻿using Sistema.Clases;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormPacientes
+{
+    public partial class PacientesForm : Form
+    {
+        // Controladores y Servicios
+        ConsultasSQL consulta = new ConsultasSQL();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+
+        string operacion = ""; // "Agregando" o "Editando"
+
+        public PacientesForm()
+        {
+            InitializeComponent();
+            MostrarPacientes();
+        }
+
+        /// <summary>
+        /// Muestra la lista de pacientes en el DataGridView
+        /// </summary>
+        private void MostrarPacientes()
+        {
+            try
+            {
+                string columnas = "Id_Paciente, Cedula, Nombre, Apellido, Genero, Email, Telefono, Direccion, Fecha_Nacimiento";
+                DataTable dt = consulta.Buscar("Pacientes", columnas);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dgvPacientes.DataSource = dt;
+                    dgvPacientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvPacientes.Refresh();
+                }
+                else
+                {
+                    dgvPacientes.DataSource = null;
+                    Alertas.Advertencia("No hay pacientes registrados.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar pacientes: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Recopia los datos del formulario y llama al controlador de guardado
+        /// </summary>
+        private void CompartirDatos()
+        {
+            try
+            {
+                // Validar campos no vacíos
+                if (string.IsNullOrEmpty(txtCedula.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtNombre.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtApellido.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtEmail.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtTelefono.Text.Trim()) ||
+                    string.IsNullOrEmpty(cmbGenero.Text))
+                {
+                    Alertas.Advertencia("Por favor, complete todos los campos.");
+                    return;
+                }
+
+                // Validar formato de email
+                if (!txtEmail.Text.Contains("@"))
+                {
+                    Alertas.Advertencia("Email inválido.");
+                    return;
+                }
+
+                int idPaciente = string.IsNullOrEmpty(txtID.Text) ? 0 : Convert.ToInt32(txtID.Text);
+                string cedula = txtCedula.Text.Trim();
+                string nombre = txtNombre.Text.Trim();
+                string apellido = txtApellido.Text.Trim();
+                string genero = cmbGenero.SelectedItem?.ToString() ?? "";
+                string email = txtEmail.Text.Trim();
+                string telefono = txtTelefono.Text.Trim();
+                string direccion = txtDireccion.Text.Trim();
+                DateTime fechaNacimiento = dtpFechaNacimiento.Value;
+
+                GuardarPaciente(idPaciente, cedula, nombre, apellido, genero, email, telefono, direccion, fechaNacimiento);
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al procesar datos: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Guarda o actualiza un paciente en la BD
+        /// </summary>
+        private void GuardarPaciente(int id, string cedula, string nombre, string apellido, 
+                                     string genero, string email, string telefono, string direccion, DateTime fechaNacimiento)
+        {
+            try
+            {
+                string sql = "";
+
+                if (operacion == "Editando")
+                {
+                    sql = $@"UPDATE Pacientes
+                             SET Cedula = @Cedula,
+                                 Nombre = @Nombre,
+                                 Apellido = @Apellido,
+                                 Genero = @Genero,
+                                 Email = @Email,
+                                 Telefono = @Telefono,
+                                 Direccion = @Direccion,
+                                 Fecha_Nacimiento = @FechaNacimiento
+                             WHERE Id_Paciente = {id}";
+                }
+                else
+                {
+                    sql = $@"INSERT INTO Pacientes
+                             (Cedula, Nombre, Apellido, Genero, Email, Telefono, Direccion, Fecha_Nacimiento)
+                             VALUES
+                             (@Cedula, @Nombre, @Apellido, @Genero, @Email, @Telefono, @Direccion, @FechaNacimiento)";
+                }
+
+                using (var cmd = new System.Data.SqlClient.SqlCommand(sql))
+                {
+                    cmd.Parameters.AddWithValue("@Cedula", cedula);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@Genero", genero);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Telefono", telefono);
+                    cmd.Parameters.AddWithValue("@Direccion", direccion);
+                    cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
+
+                    int filas = consulta.EjecutarComando(cmd);
+
+                    if (filas > 0)
+                    {
+                        string mensaje = operacion == "Editando" ? "actualizo" : "guardo";
+                        Alertas.Realizado($"Paciente {nombre} {apellido} se {mensaje} correctamente.");
+                        LimpiarCampos();
+                        MostrarPacientes();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al guardar paciente: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Limpia todos los campos del formulario
+        /// </summary>
+        private void LimpiarCampos()
+        {
+            txtID.Text = string.Empty;
+            txtCedula.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtTelefono.Text = string.Empty;
+            txtDireccion.Text = string.Empty;
+            cmbGenero.SelectedIndex = -1;
+            dtpFechaNacimiento.Value = DateTime.Now;
+            operacion = "Agregando";
+        }
+
+        /// <summary>
+        /// Carga los datos de un paciente al hacer doble clic en la tabla
+        /// </summary>
+        private void EnviarDatosParaEditar(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dgvPacientes.Rows[e.RowIndex];
+                    operacion = "Editando";
+
+                    txtID.Text = fila.Cells["Id_Paciente"].Value?.ToString() ?? "";
+                    txtCedula.Text = fila.Cells["Cedula"].Value?.ToString() ?? "";
+                    txtNombre.Text = fila.Cells["Nombre"].Value?.ToString() ?? "";
+                    txtApellido.Text = fila.Cells["Apellido"].Value?.ToString() ?? "";
+                    txtEmail.Text = fila.Cells["Email"].Value?.ToString() ?? "";
+                    txtTelefono.Text = fila.Cells["Telefono"].Value?.ToString() ?? "";
+                    txtDireccion.Text = fila.Cells["Direccion"].Value?.ToString() ?? "";
+
+                    // Cargar género
+                    string genero = fila.Cells["Genero"].Value?.ToString() ?? "";
+                    if (!string.IsNullOrEmpty(genero))
+                    {
+                        cmbGenero.SelectedItem = genero;
+                    }
+
+                    // Cargar fecha de nacimiento
+                    if (DateTime.TryParse(fila.Cells["Fecha_Nacimiento"].Value?.ToString() ?? "", out DateTime fecha))
+                    {
+                        dtpFechaNacimiento.Value = fecha;
+                    }
+
+                    // Deshabilitar campo de cédula al editar
+                    txtCedula.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+            }
+        }
+
+        // Event Handlers
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CompartirDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            txtCedula.Enabled = true;
+            MostrarPacientes();
+        }
+
+        private void dgvPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
+        }
+    }
+}

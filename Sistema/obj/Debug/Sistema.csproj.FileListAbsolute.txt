@@ -1,0 +1,67 @@
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.exe.config
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.exe
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.pdb
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.dll
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\Guna.UI2.dll
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.xml
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.AssemblyReference.cache
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Form1.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.InicioLOGO.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLogin.LoginForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.MenuForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.DentistasForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.EspecialidadesForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.CitasForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.PacientesForm.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormUsuarios.FormCrearUsuarios.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Properties.Resources.resources
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.GenerateResource.cache
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.Up2Date
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.exe
+D:\SistemasCODE\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.pdb
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.exe.config
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.exe
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\Sistema.pdb
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.dll
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\Guna.UI2.dll
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.xml
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.AssemblyReference.cache
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Form1.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.InicioLOGO.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLogin.LoginForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.MenuForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.DentistasForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.EspecialidadesForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.CitasForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.PacientesForm.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormUsuarios.FormCrearUsuarios.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.Properties.Resources.resources
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.GenerateResource.cache
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.csproj.Up2Date
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.exe
+D:\Base de Datos\SistemaOdontologico\Sistema\Sistema\obj\Debug\Sistema.pdb
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\Sistema.exe.config
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\Sistema.exe
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\Sistema.pdb
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\Guna.UI2.dll
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.AssemblyReference.cache
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.exe.config
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Form1.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.InicioLOGO.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.FormLogin.LoginForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.MenuForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.DentistasForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormDentistas.EspecialidadesForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.CitasForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormPacientes.PacientesForm.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Formularios.FormUsuarios.FormCrearUsuarios.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Properties.Resources.resources
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.GenerateResource.cache
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.CoreCompileInputs.cache
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.Up2Date
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.exe
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.pdb

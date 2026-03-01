@@ -1,0 +1,388 @@
+﻿namespace Sistema.Formularios.FormPacientes
+{
+    partial class CitasForm
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.pnlHeader = new System.Windows.Forms.Panel();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.pnlFormulario = new System.Windows.Forms.Panel();
+            this.dgvCitas = new System.Windows.Forms.DataGridView();
+            this.pnlControles = new System.Windows.Forms.Panel();
+            this.btnCancelar = new System.Windows.Forms.Button();
+            this.btnGuardar = new System.Windows.Forms.Button();
+            this.pnlDatos = new System.Windows.Forms.Panel();
+            this.dtpHoraCita = new System.Windows.Forms.DateTimePicker();
+            this.lblHoraCita = new System.Windows.Forms.Label();
+            this.cmbEstado = new System.Windows.Forms.ComboBox();
+            this.lblEstado = new System.Windows.Forms.Label();
+            this.txtNotas = new System.Windows.Forms.TextBox();
+            this.lblNotas = new System.Windows.Forms.Label();
+            this.cmbDentista = new System.Windows.Forms.ComboBox();
+            this.lblDentista = new System.Windows.Forms.Label();
+            this.cmbPaciente = new System.Windows.Forms.ComboBox();
+            this.lblPaciente = new System.Windows.Forms.Label();
+            this.dtpFechaCita = new System.Windows.Forms.DateTimePicker();
+            this.lblFechaCita = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
+            this.lblID = new System.Windows.Forms.Label();
+            this.pnlHeader.SuspendLayout();
+            this.pnlFormulario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).BeginInit();
+            this.pnlControles.SuspendLayout();
+            this.pnlDatos.SuspendLayout();
+            this.SuspendLayout();
+            // 
+            // pnlHeader
+            // 
+            this.pnlHeader.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.pnlHeader.Controls.Add(this.lblTitulo);
+            this.pnlHeader.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlHeader.Location = new System.Drawing.Point(0, 0);
+            this.pnlHeader.Name = "pnlHeader";
+            this.pnlHeader.Size = new System.Drawing.Size(1000, 60);
+            this.pnlHeader.TabIndex = 0;
+            // 
+            // lblTitulo
+            // 
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Bold);
+            this.lblTitulo.ForeColor = System.Drawing.Color.White;
+            this.lblTitulo.Location = new System.Drawing.Point(20, 10);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(232, 37);
+            this.lblTitulo.TabIndex = 0;
+            this.lblTitulo.Text = "Gestión de Citas";
+            // 
+            // pnlFormulario
+            // 
+            this.pnlFormulario.Controls.Add(this.pnlDatos);
+            this.pnlFormulario.Controls.Add(this.pnlControles);
+            this.pnlFormulario.Controls.Add(this.dgvCitas);
+            this.pnlFormulario.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnlFormulario.Location = new System.Drawing.Point(0, 60);
+            this.pnlFormulario.Name = "pnlFormulario";
+            this.pnlFormulario.Size = new System.Drawing.Size(1000, 690);
+            this.pnlFormulario.TabIndex = 1;
+            // 
+            // dgvCitas
+            // 
+            this.dgvCitas.AllowUserToAddRows = false;
+            this.dgvCitas.AllowUserToDeleteRows = false;
+            this.dgvCitas.BackgroundColor = System.Drawing.Color.WhiteSmoke;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(200)))), ((int)(((byte)(100)))));
+            dataGridViewCellStyle1.WrapText = true;
+            this.dgvCitas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgvCitas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(120)))), ((int)(((byte)(200)))), ((int)(((byte)(120)))));
+            this.dgvCitas.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvCitas.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dgvCitas.EnableHeadersVisualStyles = false;
+            this.dgvCitas.Location = new System.Drawing.Point(0, 375);
+            this.dgvCitas.Name = "dgvCitas";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Segoe UI", 9F);
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            this.dgvCitas.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgvCitas.Size = new System.Drawing.Size(1000, 315);
+            this.dgvCitas.TabIndex = 0;
+            this.dgvCitas.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCitas_CellDoubleClick);
+            // 
+            // pnlControles
+            // 
+            this.pnlControles.Controls.Add(this.btnCancelar);
+            this.pnlControles.Controls.Add(this.btnGuardar);
+            this.pnlControles.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.pnlControles.Location = new System.Drawing.Point(0, 330);
+            this.pnlControles.Name = "pnlControles";
+            this.pnlControles.Size = new System.Drawing.Size(1000, 45);
+            this.pnlControles.TabIndex = 1;
+            // 
+            // btnCancelar
+            // 
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(53)))), ((int)(((byte)(69)))));
+            this.btnCancelar.FlatAppearance.BorderSize = 0;
+            this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
+            this.btnCancelar.Location = new System.Drawing.Point(900, 10);
+            this.btnCancelar.Name = "btnCancelar";
+            this.btnCancelar.Size = new System.Drawing.Size(90, 30);
+            this.btnCancelar.TabIndex = 1;
+            this.btnCancelar.Text = "Cancelar";
+            this.btnCancelar.UseVisualStyleBackColor = false;
+            this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 10F, System.Drawing.FontStyle.Bold);
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(790, 10);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(100, 30);
+            this.btnGuardar.TabIndex = 0;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
+            // 
+            // pnlDatos
+            // 
+            this.pnlDatos.AutoScroll = true;
+            this.pnlDatos.BackColor = System.Drawing.Color.White;
+            this.pnlDatos.Controls.Add(this.dtpHoraCita);
+            this.pnlDatos.Controls.Add(this.lblHoraCita);
+            this.pnlDatos.Controls.Add(this.cmbEstado);
+            this.pnlDatos.Controls.Add(this.lblEstado);
+            this.pnlDatos.Controls.Add(this.txtNotas);
+            this.pnlDatos.Controls.Add(this.lblNotas);
+            this.pnlDatos.Controls.Add(this.cmbDentista);
+            this.pnlDatos.Controls.Add(this.lblDentista);
+            this.pnlDatos.Controls.Add(this.cmbPaciente);
+            this.pnlDatos.Controls.Add(this.lblPaciente);
+            this.pnlDatos.Controls.Add(this.dtpFechaCita);
+            this.pnlDatos.Controls.Add(this.lblFechaCita);
+            this.pnlDatos.Controls.Add(this.txtID);
+            this.pnlDatos.Controls.Add(this.lblID);
+            this.pnlDatos.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnlDatos.Location = new System.Drawing.Point(0, 0);
+            this.pnlDatos.Name = "pnlDatos";
+            this.pnlDatos.Padding = new System.Windows.Forms.Padding(20);
+            this.pnlDatos.Size = new System.Drawing.Size(1000, 330);
+            this.pnlDatos.TabIndex = 2;
+            // 
+            // dtpHoraCita
+            // 
+            this.dtpHoraCita.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpHoraCita.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtpHoraCita.Location = new System.Drawing.Point(530, 150);
+            this.dtpHoraCita.Name = "dtpHoraCita";
+            this.dtpHoraCita.ShowUpDown = true;
+            this.dtpHoraCita.Size = new System.Drawing.Size(420, 23);
+            this.dtpHoraCita.TabIndex = 11;
+            // 
+            // lblHoraCita
+            // 
+            this.lblHoraCita.AutoSize = true;
+            this.lblHoraCita.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblHoraCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblHoraCita.Location = new System.Drawing.Point(530, 130);
+            this.lblHoraCita.Name = "lblHoraCita";
+            this.lblHoraCita.Size = new System.Drawing.Size(76, 15);
+            this.lblHoraCita.TabIndex = 10;
+            this.lblHoraCita.Text = "Hora de Cita:";
+            // 
+            // cmbEstado
+            // 
+            this.cmbEstado.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbEstado.FormattingEnabled = true;
+            this.cmbEstado.Items.AddRange(new object[] {
+            "Pendiente",
+            "Confirmada",
+            "Completada",
+            "Cancelada"});
+            this.cmbEstado.Location = new System.Drawing.Point(50, 270);
+            this.cmbEstado.Name = "cmbEstado";
+            this.cmbEstado.Size = new System.Drawing.Size(420, 23);
+            this.cmbEstado.TabIndex = 9;
+            // 
+            // lblEstado
+            // 
+            this.lblEstado.AutoSize = true;
+            this.lblEstado.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblEstado.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblEstado.Location = new System.Drawing.Point(50, 250);
+            this.lblEstado.Name = "lblEstado";
+            this.lblEstado.Size = new System.Drawing.Size(51, 15);
+            this.lblEstado.TabIndex = 8;
+            this.lblEstado.Text = "Estado:";
+            // 
+            // txtNotas
+            // 
+            this.txtNotas.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtNotas.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtNotas.Location = new System.Drawing.Point(530, 210);
+            this.txtNotas.Multiline = true;
+            this.txtNotas.Name = "txtNotas";
+            this.txtNotas.Size = new System.Drawing.Size(420, 80);
+            this.txtNotas.TabIndex = 7;
+            // 
+            // lblNotas
+            // 
+            this.lblNotas.AutoSize = true;
+            this.lblNotas.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblNotas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblNotas.Location = new System.Drawing.Point(530, 190);
+            this.lblNotas.Name = "lblNotas";
+            this.lblNotas.Size = new System.Drawing.Size(42, 15);
+            this.lblNotas.TabIndex = 6;
+            this.lblNotas.Text = "Notas:";
+            // 
+            // cmbDentista
+            // 
+            this.cmbDentista.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbDentista.FormattingEnabled = true;
+            this.cmbDentista.Location = new System.Drawing.Point(50, 210);
+            this.cmbDentista.Name = "cmbDentista";
+            this.cmbDentista.Size = new System.Drawing.Size(420, 23);
+            this.cmbDentista.TabIndex = 5;
+            // 
+            // lblDentista
+            // 
+            this.lblDentista.AutoSize = true;
+            this.lblDentista.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblDentista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblDentista.Location = new System.Drawing.Point(50, 190);
+            this.lblDentista.Name = "lblDentista";
+            this.lblDentista.Size = new System.Drawing.Size(57, 15);
+            this.lblDentista.TabIndex = 4;
+            this.lblDentista.Text = "Dentista:";
+            // 
+            // cmbPaciente
+            // 
+            this.cmbPaciente.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.cmbPaciente.FormattingEnabled = true;
+            this.cmbPaciente.Location = new System.Drawing.Point(50, 150);
+            this.cmbPaciente.Name = "cmbPaciente";
+            this.cmbPaciente.Size = new System.Drawing.Size(420, 23);
+            this.cmbPaciente.TabIndex = 3;
+            // 
+            // lblPaciente
+            // 
+            this.lblPaciente.AutoSize = true;
+            this.lblPaciente.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblPaciente.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblPaciente.Location = new System.Drawing.Point(50, 130);
+            this.lblPaciente.Name = "lblPaciente";
+            this.lblPaciente.Size = new System.Drawing.Size(57, 15);
+            this.lblPaciente.TabIndex = 2;
+            this.lblPaciente.Text = "Paciente:";
+            // 
+            // dtpFechaCita
+            // 
+            this.dtpFechaCita.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.dtpFechaCita.Location = new System.Drawing.Point(530, 90);
+            this.dtpFechaCita.Name = "dtpFechaCita";
+            this.dtpFechaCita.Size = new System.Drawing.Size(420, 23);
+            this.dtpFechaCita.TabIndex = 1;
+            // 
+            // lblFechaCita
+            // 
+            this.lblFechaCita.AutoSize = true;
+            this.lblFechaCita.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblFechaCita.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblFechaCita.Location = new System.Drawing.Point(530, 70);
+            this.lblFechaCita.Name = "lblFechaCita";
+            this.lblFechaCita.Size = new System.Drawing.Size(72, 15);
+            this.lblFechaCita.TabIndex = 0;
+            this.lblFechaCita.Text = "Fecha Cita:";
+            // 
+            // txtID
+            // 
+            this.txtID.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtID.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.txtID.Location = new System.Drawing.Point(50, 30);
+            this.txtID.Name = "txtID";
+            this.txtID.ReadOnly = true;
+            this.txtID.Size = new System.Drawing.Size(420, 23);
+            this.txtID.TabIndex = 0;
+            // 
+            // lblID
+            // 
+            this.lblID.AutoSize = true;
+            this.lblID.Font = new System.Drawing.Font("Segoe UI", 9F, System.Drawing.FontStyle.Bold);
+            this.lblID.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(76)))), ((int)(((byte)(175)))), ((int)(((byte)(80)))));
+            this.lblID.Location = new System.Drawing.Point(50, 10);
+            this.lblID.Name = "lblID";
+            this.lblID.Size = new System.Drawing.Size(23, 15);
+            this.lblID.TabIndex = 0;
+            this.lblID.Text = "ID:";
+            // 
+            // CitasForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1000, 750);
+            this.Controls.Add(this.pnlFormulario);
+            this.Controls.Add(this.pnlHeader);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "CitasForm";
+            this.Text = "CitasForm";
+            this.pnlHeader.ResumeLayout(false);
+            this.pnlHeader.PerformLayout();
+            this.pnlFormulario.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCitas)).EndInit();
+            this.pnlControles.ResumeLayout(false);
+            this.pnlDatos.ResumeLayout(false);
+            this.pnlDatos.PerformLayout();
+            this.ResumeLayout(false);
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Panel pnlHeader;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.Panel pnlFormulario;
+        private System.Windows.Forms.DataGridView dgvCitas;
+        private System.Windows.Forms.Panel pnlControles;
+        private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button btnGuardar;
+        private System.Windows.Forms.Panel pnlDatos;
+        private System.Windows.Forms.DateTimePicker dtpHoraCita;
+        private System.Windows.Forms.Label lblHoraCita;
+        private System.Windows.Forms.ComboBox cmbEstado;
+        private System.Windows.Forms.Label lblEstado;
+        private System.Windows.Forms.TextBox txtNotas;
+        private System.Windows.Forms.Label lblNotas;
+        private System.Windows.Forms.ComboBox cmbDentista;
+        private System.Windows.Forms.Label lblDentista;
+        private System.Windows.Forms.ComboBox cmbPaciente;
+        private System.Windows.Forms.Label lblPaciente;
+        private System.Windows.Forms.DateTimePicker dtpFechaCita;
+        private System.Windows.Forms.Label lblFechaCita;
+        private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.Label lblID;
+    }
+}

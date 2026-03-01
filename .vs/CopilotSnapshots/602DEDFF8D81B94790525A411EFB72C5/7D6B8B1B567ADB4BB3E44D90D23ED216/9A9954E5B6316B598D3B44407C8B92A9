@@ -1,0 +1,256 @@
+﻿using Sistema.Clases;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormDentistas
+{
+    public partial class DentistasForm : Form
+    {
+        // Controladores y Servicios
+        ConsultasSQL consulta = new ConsultasSQL();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+
+        string operacion = ""; // "Agregando" o "Editando"
+
+        public DentistasForm()
+        {
+            InitializeComponent();
+            CargarEspecialidades();
+            MostrarDentistas();
+        }
+
+        /// <summary>
+        /// Carga las especialidades en el ComboBox
+        /// </summary>
+        private void CargarEspecialidades()
+        {
+            try
+            {
+                DataTable dtEspecialidades = consulta.Buscar("Especialidades", "Id_Especialidad, Nombre");
+                if (dtEspecialidades != null && dtEspecialidades.Rows.Count > 0)
+                {
+                    cmbEspecialidad.DataSource = dtEspecialidades;
+                    cmbEspecialidad.DisplayMember = "Nombre";
+                    cmbEspecialidad.ValueMember = "Id_Especialidad";
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar especialidades: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Muestra la lista de dentistas en el DataGridView
+        /// </summary>
+        private void MostrarDentistas()
+        {
+            try
+            {
+                string sql = @"SELECT d.Id_Dentista, d.Cedula, d.Nombre, d.Apellido, 
+                              e.Nombre as Especialidad, d.Telefono, d.Email, d.Estado
+                              FROM Dentistas d
+                              LEFT JOIN Especialidades e ON d.Id_Especialidad = e.Id_Especialidad";
+
+                DataTable dt = consulta.EjecutarConsultaSelect(sql);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dgvDentistas.DataSource = dt;
+                    dgvDentistas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvDentistas.Refresh();
+                }
+                else
+                {
+                    dgvDentistas.DataSource = null;
+                    Alertas.Advertencia("No hay dentistas registrados.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar dentistas: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Recopia los datos del formulario y llama al controlador de guardado
+        /// </summary>
+        private void CompartirDatos()
+        {
+            try
+            {
+                // Validar campos no vacíos
+                if (string.IsNullOrEmpty(txtCedula.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtNombre.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtApellido.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtEmail.Text.Trim()) ||
+                    string.IsNullOrEmpty(txtTelefono.Text.Trim()) ||
+                    cmbEspecialidad.SelectedValue == null)
+                {
+                    Alertas.Advertencia("Por favor, complete todos los campos.");
+                    return;
+                }
+
+                // Validar formato de email
+                if (!txtEmail.Text.Contains("@"))
+                {
+                    Alertas.Advertencia("Email inválido.");
+                    return;
+                }
+
+                int idDentista = string.IsNullOrEmpty(txtID.Text) ? 0 : Convert.ToInt32(txtID.Text);
+                string cedula = txtCedula.Text.Trim();
+                string nombre = txtNombre.Text.Trim();
+                string apellido = txtApellido.Text.Trim();
+                int idEspecialidad = Convert.ToInt32(cmbEspecialidad.SelectedValue);
+                string email = txtEmail.Text.Trim();
+                string telefono = txtTelefono.Text.Trim();
+                string estado = chkActivo.Checked ? "Activo" : "Inactivo";
+
+                GuardarDentista(idDentista, cedula, nombre, apellido, idEspecialidad, email, telefono, estado);
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al procesar datos: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Guarda o actualiza un dentista en la BD
+        /// </summary>
+        private void GuardarDentista(int id, string cedula, string nombre, string apellido,
+                                     int idEspecialidad, string email, string telefono, string estado)
+        {
+            try
+            {
+                string sql = "";
+
+                if (operacion == "Editando")
+                {
+                    sql = $@"UPDATE Dentistas
+                             SET Cedula = @Cedula,
+                                 Nombre = @Nombre,
+                                 Apellido = @Apellido,
+                                 Id_Especialidad = @IdEspecialidad,
+                                 Email = @Email,
+                                 Telefono = @Telefono,
+                                 Estado = @Estado
+                             WHERE Id_Dentista = {id}";
+                }
+                else
+                {
+                    sql = $@"INSERT INTO Dentistas
+                             (Cedula, Nombre, Apellido, Id_Especialidad, Email, Telefono, Estado)
+                             VALUES
+                             (@Cedula, @Nombre, @Apellido, @IdEspecialidad, @Email, @Telefono, @Estado)";
+                }
+
+                using (var cmd = new System.Data.SqlClient.SqlCommand(sql))
+                {
+                    cmd.Parameters.AddWithValue("@Cedula", cedula);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@IdEspecialidad", idEspecialidad);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Telefono", telefono);
+                    cmd.Parameters.AddWithValue("@Estado", estado);
+
+                    int filas = consulta.EjecutarComando(cmd);
+
+                    if (filas > 0)
+                    {
+                        string mensaje = operacion == "Editando" ? "actualizo" : "guardo";
+                        Alertas.Realizado($"Dentista {nombre} {apellido} se {mensaje} correctamente.");
+                        LimpiarCampos();
+                        MostrarDentistas();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al guardar dentista: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Limpia todos los campos del formulario
+        /// </summary>
+        private void LimpiarCampos()
+        {
+            txtID.Text = string.Empty;
+            txtCedula.Text = string.Empty;
+            txtNombre.Text = string.Empty;
+            txtApellido.Text = string.Empty;
+            txtEmail.Text = string.Empty;
+            txtTelefono.Text = string.Empty;
+            cmbEspecialidad.SelectedIndex = 0;
+            chkActivo.Checked = true;
+            operacion = "Agregando";
+        }
+
+        /// <summary>
+        /// Carga los datos de un dentista al hacer doble clic en la tabla
+        /// </summary>
+        private void EnviarDatosParaEditar(DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dgvDentistas.Rows[e.RowIndex];
+                    operacion = "Editando";
+
+                    txtID.Text = fila.Cells["Id_Dentista"].Value?.ToString() ?? "";
+                    txtCedula.Text = fila.Cells["Cedula"].Value?.ToString() ?? "";
+                    txtNombre.Text = fila.Cells["Nombre"].Value?.ToString() ?? "";
+                    txtApellido.Text = fila.Cells["Apellido"].Value?.ToString() ?? "";
+                    txtEmail.Text = fila.Cells["Email"].Value?.ToString() ?? "";
+                    txtTelefono.Text = fila.Cells["Telefono"].Value?.ToString() ?? "";
+
+                    // Cargar especialidad
+                    string especialidad = fila.Cells["Especialidad"].Value?.ToString() ?? "";
+                    if (!string.IsNullOrEmpty(especialidad))
+                    {
+                        cmbEspecialidad.SelectedText = especialidad;
+                    }
+
+                    // Cargar estado
+                    string estado = fila.Cells["Estado"].Value?.ToString() ?? "";
+                    chkActivo.Checked = estado == "Activo";
+
+                    // Deshabilitar campo de cédula al editar
+                    txtCedula.Enabled = false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+            }
+        }
+
+        // Event Handlers
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            CompartirDatos();
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarCampos();
+            txtCedula.Enabled = true;
+            MostrarDentistas();
+        }
+
+        private void dgvDentistas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            EnviarDatosParaEditar(e);
+        }
+    }
+}
