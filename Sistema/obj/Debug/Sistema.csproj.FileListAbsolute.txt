@@ -49,7 +49,6 @@ C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\De
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\Guna.UI2.dll
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\bin\Debug\BouncyCastle.Cryptography.xml
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.AssemblyReference.cache
-C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.exe.config
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.Form1.resources
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.FormLoginMenu.InicioLOGO.resources
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.FormLogin.LoginForm.resources
@@ -65,3 +64,4 @@ C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\De
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.exe
 C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.pdb
+C:\Users\ADMIN\OneDrive\Escritorio\UCENM\X Period\Sistema\Sistema\Sistema\obj\Debug\Sistema.exe.config

@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseAlertas\AlertasDelSistema.cs" />
+    <Compile Include="Clases\ClasesCitas\Citas.cs" />
+    <Compile Include="Clases\ClasesCitas\CitasModel.cs" />
     <Compile Include="Clases\ClaseUsuarios\SalHash.cs" />
     <Compile Include="Clases\ClaseUsuarios\GuardarUsuarios.cs" />
     <Compile Include="Clases\ClaseConexionSQL\Conexion.cs" />

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCrearUsuarios));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.txtID = new Guna.UI2.WinForms.Guna2TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new Guna.UI2.WinForms.Guna2Panel();
@@ -76,7 +76,7 @@
             this.txtID.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtID.ForeColor = System.Drawing.Color.Gray;
             this.txtID.Location = new System.Drawing.Point(73, 138);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtID.Margin = new System.Windows.Forms.Padding(5);
             this.txtID.Name = "txtID";
             this.txtID.PlaceholderText = "Id";
             this.txtID.SelectedText = "";
@@ -121,7 +121,7 @@
             this.panel1.Controls.Add(this.label3);
             this.panel1.FillColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(29, 30);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1012, 202);
             this.panel1.TabIndex = 79;
@@ -133,7 +133,7 @@
             this.chkMostrarClave.ImageOffset = new System.Drawing.Point(0, 0);
             this.chkMostrarClave.ImageRotate = 0F;
             this.chkMostrarClave.Location = new System.Drawing.Point(628, 91);
-            this.chkMostrarClave.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkMostrarClave.Margin = new System.Windows.Forms.Padding(4);
             this.chkMostrarClave.Name = "chkMostrarClave";
             this.chkMostrarClave.Size = new System.Drawing.Size(32, 30);
             this.chkMostrarClave.TabIndex = 96;
@@ -148,7 +148,7 @@
             this.rbRecepcion.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbRecepcion.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbRecepcion.Location = new System.Drawing.Point(823, 25);
-            this.rbRecepcion.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbRecepcion.Margin = new System.Windows.Forms.Padding(4);
             this.rbRecepcion.Name = "rbRecepcion";
             this.rbRecepcion.Size = new System.Drawing.Size(118, 21);
             this.rbRecepcion.TabIndex = 95;
@@ -167,7 +167,7 @@
             this.rbAdmin.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbAdmin.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbAdmin.Location = new System.Drawing.Point(697, 25);
-            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbAdmin.Margin = new System.Windows.Forms.Padding(4);
             this.rbAdmin.Name = "rbAdmin";
             this.rbAdmin.Size = new System.Drawing.Size(116, 21);
             this.rbAdmin.TabIndex = 94;
@@ -187,7 +187,7 @@
             this.chkEstado.CheckedState.FillColor = System.Drawing.Color.DodgerBlue;
             this.chkEstado.Font = new System.Drawing.Font("Arial", 9F);
             this.chkEstado.Location = new System.Drawing.Point(920, 103);
-            this.chkEstado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.chkEstado.Margin = new System.Windows.Forms.Padding(4);
             this.chkEstado.Name = "chkEstado";
             this.chkEstado.Size = new System.Drawing.Size(69, 21);
             this.chkEstado.TabIndex = 93;
@@ -214,7 +214,7 @@
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelar.HoverState.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(861, 137);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(135, 42);
             this.btnCancelar.TabIndex = 91;
@@ -230,7 +230,7 @@
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
             this.btnGuardar.Location = new System.Drawing.Point(719, 137);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(135, 42);
             this.btnGuardar.TabIndex = 90;
@@ -247,7 +247,7 @@
             this.dtpFecha.ForeColor = System.Drawing.Color.White;
             this.dtpFecha.Format = System.Windows.Forms.DateTimePickerFormat.Long;
             this.dtpFecha.Location = new System.Drawing.Point(697, 49);
-            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dtpFecha.Margin = new System.Windows.Forms.Padding(4);
             this.dtpFecha.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpFecha.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpFecha.Name = "dtpFecha";
@@ -259,7 +259,7 @@
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(31, 15);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(112, 97);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -279,7 +279,7 @@
             this.txtApellido.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtApellido.ForeColor = System.Drawing.Color.Gray;
             this.txtApellido.Location = new System.Drawing.Point(464, 140);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(5);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PlaceholderText = "Ingrese su apellido";
             this.txtApellido.SelectedText = "";
@@ -312,7 +312,7 @@
             this.txtNombre.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
             this.txtNombre.Location = new System.Drawing.Point(231, 140);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PlaceholderText = "Ingrese su nombre";
             this.txtNombre.SelectedText = "";
@@ -345,7 +345,7 @@
             this.txtClave.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtClave.ForeColor = System.Drawing.Color.Gray;
             this.txtClave.Location = new System.Drawing.Point(464, 53);
-            this.txtClave.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtClave.Margin = new System.Windows.Forms.Padding(5);
             this.txtClave.Name = "txtClave";
             this.txtClave.PlaceholderText = "Ingrese una clave";
             this.txtClave.SelectedText = "";
@@ -379,7 +379,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtUsuario.ForeColor = System.Drawing.Color.Gray;
             this.txtUsuario.Location = new System.Drawing.Point(231, 53);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5, 5, 5, 5);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(5);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.PlaceholderText = "nick Usuario";
             this.txtUsuario.SelectedText = "";
@@ -409,7 +409,7 @@
             this.guna2Panel1.Controls.Add(this.dgvDatos);
             this.guna2Panel1.FillColor = System.Drawing.Color.White;
             this.guna2Panel1.Location = new System.Drawing.Point(29, 251);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
             this.guna2Panel1.Name = "guna2Panel1";
             this.guna2Panel1.Size = new System.Drawing.Size(1012, 295);
             this.guna2Panel1.TabIndex = 94;
@@ -423,7 +423,7 @@
             this.rbInactivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbInactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbInactivos.Location = new System.Drawing.Point(905, 9);
-            this.rbInactivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbInactivos.Margin = new System.Windows.Forms.Padding(4);
             this.rbInactivos.Name = "rbInactivos";
             this.rbInactivos.Size = new System.Drawing.Size(84, 21);
             this.rbInactivos.TabIndex = 97;
@@ -443,7 +443,7 @@
             this.rbActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbActivos.Location = new System.Drawing.Point(817, 9);
-            this.rbActivos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.rbActivos.Margin = new System.Windows.Forms.Padding(4);
             this.rbActivos.Name = "rbActivos";
             this.rbActivos.Size = new System.Drawing.Size(74, 21);
             this.rbActivos.TabIndex = 96;
@@ -456,29 +456,29 @@
             // 
             // dgvDatos
             // 
-            dataGridViewCellStyle10.BackColor = System.Drawing.Color.White;
-            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
-            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle11.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.ColumnHeadersHeight = 15;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle12.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle12.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle12.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle12;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
             this.dgvDatos.Location = new System.Drawing.Point(16, 38);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.RowHeadersWidth = 51;
@@ -530,7 +530,7 @@
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "FormCrearUsuarios";
             this.ShowIcon = false;
             this.Text = "FormCrearUsuarios";

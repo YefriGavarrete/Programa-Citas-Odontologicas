@@ -38,7 +38,19 @@ namespace Sistema.FormLogin
 
             try
             {
-                consultaUsuario.BuscarUsuario("UsuariosLogin", usuario, clave);
+
+                bool acceso = consultaUsuario.BuscarUsuario("UsuariosLogin", usuario, clave);
+                if (acceso)
+                {
+                    var menu = new MenuForm();
+                    menu.StartPosition = FormStartPosition.CenterScreen;
+                    menu.FormClosed += (s, args) =>
+                    {
+                        this.Show();
+                    };
+                    menu.Show();
+                    this.Hide();
+                }
             }
             catch(Exception ex)
             { 

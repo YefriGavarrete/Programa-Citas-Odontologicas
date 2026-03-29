@@ -13,6 +13,7 @@ namespace Sistema.Clases
     {
         AlertasDelSistema Alertas = new AlertasDelSistema();
 
+        Conexion conexion = new Conexion();
         string consulta;
         int filasAfectadas = 0;
 
@@ -20,6 +21,8 @@ namespace Sistema.Clases
         {
             return ConfigurationManager.ConnectionStrings["ConexionDB"]?.ConnectionString ?? string.Empty;
         }
+
+      
 
         public bool Guardar(string tabla, string columnas, string valores)
         {
@@ -129,7 +132,26 @@ namespace Sistema.Clases
             return filasAfectadas;
         }
 
-        // Consulta SELECT generica para obtener datos de la BDD
+        public object EjecutarEscalar(SqlCommand comando)
+        {
+            object resultado = null;
+            string connString = GetConnectionString();
+            try
+            {
+                using (var conn = new SqlConnection(connString))
+                {
+                    comando.Connection = conn;
+                    conn.Open();
+                    resultado = comando.ExecuteScalar();
+                }
+            }
+            catch (SqlException error)
+            {
+                Alertas.Advertencia($"Error al ejecutar consulta escalar:\n{error.Message}");
+            }
+
+            return resultado;
+        }
         public DataTable EjecutarConsultaSelect(string consulta)
         {
             DataTable resultados = new DataTable();
@@ -179,5 +201,8 @@ namespace Sistema.Clases
                 return cmd.ExecuteNonQuery() > 0;
             }
         }
+
+
+        
     }
 }

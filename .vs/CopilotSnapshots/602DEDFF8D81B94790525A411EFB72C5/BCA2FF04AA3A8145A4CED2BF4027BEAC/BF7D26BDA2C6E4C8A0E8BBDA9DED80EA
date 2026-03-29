@@ -1,0 +1,205 @@
+﻿using Sistema.Clases;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormPacientes
+{
+    public partial class CitasForm : Form
+    {  AlertasDelSistema Alertas = new AlertasDelSistema();
+        public CitasForm()
+        {
+            InitializeComponent();
+        }
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+
+
+
+        }
+        /*
+
+        void CrearPedido()
+        {
+            string nombre = txtNombre.Text.Trim();
+            string apellido = txtApellido.Text.Trim();
+            string dni = txtDNI.Text.Trim();
+            //string estado = "Pendiente";
+            string montopagado = txtTotal.Text.Trim();
+            //string metodopago = "Pendiente";
+            int idEmpleado = IdUsuario;
+
+            if (string.IsNullOrEmpty(nombre) || string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(dni))
+            {
+                Alertas.Advertencia("Por favor, complete los datos del cliente.");
+                return;
+            }
+
+            string fecha = Fecha.ToString(fechaSQL);
+
+            string columnas = "NombreCliente, ApellidoCliente, DNI, Fecha, IdEmpleado, NombreEmpleado, ApellidoEmpleado, Estado, MetodoPago, MontoPagado";
+            string valores = $"'{nombre}', '{apellido}', '{dni.ToString()}','{fecha}', '{idEmpleado}', '{UsuarioNombre}', '{UsuarioApellido}', '{estadoPagoGlobal}', '{metodoPagoGlobal}', '{montopagado}'";
+            //Nombre y Apellido del empleado que crea el pedido
+            if (consultas.Guardar("Pedidos", columnas, valores))
+            {
+                // Obtener el IdPedido recién insertado
+                DataTable dt = consultas.Buscar("Pedidos", "MAX(IdPedido) AS IdPedido");
+                int idPedido = Convert.ToInt32(dt.Rows[0]["IdPedido"]);
+
+                // Mostrar IdPedido en el TextBox
+                txtIdPedido.Text = idPedido.ToString();
+
+                Alertas.Realizado($"En este momento esta creando un pedido a nombre de: '{nombre} {apellido}' - Numero de pedido: #{idPedido}");
+
+                btnCrearPedido.Enabled = false;
+                btnBuscarProductos.Enabled = true;
+            }
+            else
+            {
+                Alertas.Advertencia("Error al crear el pedido");
+                btnCrearPedido.Enabled = true;
+                btnBuscarProductos.Enabled = false;
+            }
+        }
+
+
+        // metodo para guardar dellates pedidos y actualizar tabla pedido con el monto total
+        public void GuardarDetallesPedido(ClaseProcesoPago procesoPago)
+        {
+            if (string.IsNullOrEmpty(txtIdPedido.Text))
+            {
+                Alertas.Advertencia("No hay un pedido seleccionado o creado.");
+                return;
+            }
+
+            int idPedido = Convert.ToInt32(txtIdPedido.Text);
+
+            if (DGVDatos.Rows.Count == 0)
+            {
+                Alertas.Advertencia("No hay productos en el pedido.");
+                return;
+            }
+
+            bool exito = true;
+
+            foreach (DataGridViewRow fila in DGVDatos.Rows)
+            {
+                if (fila.IsNewRow) continue; // evita fila vacía
+
+                int idProducto = Convert.ToInt32(fila.Cells["IdProducto"].Value);
+                string categoria = Convert.ToString(fila.Cells["Categoria"].Value);
+                string marca = Convert.ToString(fila.Cells["Marca"].Value);
+                string modelo = Convert.ToString(fila.Cells["Modelo"].Value);
+                decimal precio = Convert.ToDecimal(fila.Cells["Precio"].Value);
+                int cantidad = Convert.ToInt32(fila.Cells["Cantidad"].Value);
+                decimal descuento = Convert.ToDecimal(fila.Cells["Descuento"].Value);
+                decimal subtotal = Convert.ToDecimal(fila.Cells["Subtotal"].Value);
+                decimal isv = Convert.ToDecimal(fila.Cells["ISV"].Value);
+                decimal total = Convert.ToDecimal(fila.Cells["Total"].Value);
+
+                string columnas = "IdPedido, IdProducto, Categoria, Marca, Modelo, Precio, Cantidad, Descuento, Subtotal, ISV, Total";
+                string valores = $"'{idPedido}', '{idProducto}', '{categoria}', '{marca}', '{modelo}', '{precio}', '{cantidad}', '{descuento}', '{subtotal}', '{isv}', '{total}'";
+
+                if (!consultas.Guardar("DetallesPedidos", columnas, valores))
+                {
+                    exito = false;
+                    break;
+                }
+            }
+
+            // Guardar factura en la tabla Facturas
+
+            facturacion(idPedido, exito);
+
+            if (exito)
+            {
+                //Alertas.Realizado("Pedido creado exitosamente.");
+
+                actualizarPedido(procesoPago);
+                RestarStockProducto();
+                LimpiarFormulario();
+            }
+            else
+            {
+                Alertas.Advertencia("Ocurrió un error al guardar los productos del pedido.");
+            }
+        }
+
+        // Guardar en Tabla Facturas
+        void GuardarFactura(int idPedido, bool exito, string nombreFactura)
+        {
+            string carpetaFacturas = Path.Combine(Application.StartupPath, "Facturas");
+            //string rutaPDF = Path.Combine(carpetaFacturas, $"Factura_{idPedido}.pdf");
+            string rutaPDF = Path.Combine(carpetaFacturas, nombreFactura);
+
+            byte[] pdfBytes = File.ReadAllBytes(rutaPDF);
+
+            /*  foreach (DataGridViewRow fila in DGVDatos.Rows)
+              {
+                  if (fila.IsNewRow) continue;
+
+            string fecha = Fecha.ToString(fechaSQL);
+            //decimal total = Convert.ToDecimal(fila.Cells["Total"].Value);
+            decimal total = decimal.Parse(txtTotal.Text);
+
+            var parametros = new Dictionary<string, object>()
+                {
+                    { "IdPedido", idPedido },
+                    { "Fecha", fecha },
+                    { "NombreEmpleado", UsuarioNombre },
+                    { "ApellidoEmpleado", UsuarioApellido },
+                    { "NombreCliente", txtNombre.Text },
+                    { "ApellidoCliente", txtApellido.Text },
+                    { "DNI", txtDNI.Text.Trim() },
+                    { "Total", total },
+                    { "PDF", pdfBytes }
+                };
+
+            string columnas = "IdPedido, Fecha, NombreEmpleado, ApellidoEmpleado, NombreCliente, ApelidoCliente, DNI, Total, PDF";
+
+            if (!consultas.GuardarPDF("Facturas", columnas, parametros))
+            {
+                exito = false;
+                //break;
+            }
+        }
+
+        // metodo para actualizar el estado y monto del pedido facturado
+        void actualizarPedido(ClaseProcesoPago pago)
+        {
+            try
+            {
+                string estado = pago.EstadoPago;
+                string metodopago = pago.MetodoPago;
+
+                decimal montopagado = decimal.Parse(txtTotal.Text);
+                string actualizar = $"Estado = '{estado}', MetodoPago = '{metodopago}', MontoPagado = '{montopagado}'";
+                string condicion = $"IdPedido='{txtIdPedido.Text}'";
+
+                consultas.update("Pedidos", actualizar, condicion);
+            }
+            catch (Exception ex)
+            {
+
+            }
+
+
+    */
+
+
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+      
+    }
+}

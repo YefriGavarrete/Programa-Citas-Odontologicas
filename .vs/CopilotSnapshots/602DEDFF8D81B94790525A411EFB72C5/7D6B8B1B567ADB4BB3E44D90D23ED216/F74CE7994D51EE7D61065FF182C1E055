@@ -1,0 +1,46 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Clases.ClasesCitas
+{
+    public class Citas
+    {
+        ConsultasSQL consulta = new ConsultasSQL();
+
+        private void MostrarCitas()
+        {
+            try
+            {
+                string sql = @"SELECT c.Id_Cita, p.Nombre as Paciente, p.Apellido, d.Nombre as Dentista, 
+                              c.Fecha_Cita, c.Hora_Cita, c.Estado, c.Notas
+                              FROM Citas c
+                              INNER JOIN Pacientes p ON c.Id_Paciente = p.Id_Paciente
+                              INNER JOIN Dentistas d ON c.Id_Dentista = d.Id_Dentista";
+
+                DataTable dt = consulta.EjecutarConsultaSelect(sql);
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dgvCitas.DataSource = dt;
+                    dgvCitas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvCitas.Refresh();
+                }
+                else
+                {
+                    dgvCitas.DataSource = null;
+                    Alertas.Advertencia("No hay citas registradas.");
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar citas: {ex.Message}");
+
+
+
+            }
+        }

@@ -1,0 +1,344 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.SqlClient;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Clases.ClasesCitas
+{
+    /// <summary>
+    /// Controlador de Citas - Lógica de negocio
+    /// Maneja todo lo relacionado con citas: crear, mostrar, editar, eliminar
+    /// Sigue patrón MVC: Esta clase contiene la lógica, no la UI
+    /// </summary>
+    public class Citas
+    {
+        ConsultasSQL consulta = new ConsultasSQL();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+
+        /// <summary>
+        /// Método único que gestiona el flujo completo:
+        /// 1. Valida datos del paciente
+        /// 2. Guarda el paciente en BD
+        /// 3. Obtiene el ID del paciente creado
+        /// 4. Guarda la cita con ese ID
+        /// 
+        /// Parámetros: Todos los datos necesarios para crear paciente + cita
+        /// Retorna: ID de la cita creada (0 si falla)
+        /// </summary>
+        public int GuardarPacienteYCita(
+            string cedula, string nombre, string apellido, string genero,
+            string email, string telefono, string direccion, DateTime fechaNacimiento,
+            int idDentista, DateTime fechaCita, DateTime horaCita, string estado, string notas)
+        {
+            try
+            {
+                // ========================================
+                // VALIDACIÓN DE DATOS DEL PACIENTE
+                // ========================================
+                if (string.IsNullOrEmpty(cedula) || string.IsNullOrEmpty(nombre) ||
+                    string.IsNullOrEmpty(apellido) || string.IsNullOrEmpty(email))
+                {
+                    Alertas.Advertencia("Por favor, complete los datos del paciente (Cédula, Nombre, Apellido, Email).");
+                    return 0;
+                }
+
+                // Validar formato de email
+                if (!email.Contains("@"))
+                {
+                    Alertas.Advertencia("Email inválido. Debe contener @");
+                    return 0;
+                }
+
+                // ========================================
+                // VALIDACIÓN DE DATOS DE LA CITA
+                // ========================================
+                if (idDentista <= 0)
+                {
+                    Alertas.Advertencia("Seleccione un dentista válido.");
+                    return 0;
+                }
+
+                if (string.IsNullOrEmpty(estado))
+                {
+                    Alertas.Advertencia("Seleccione un estado para la cita.");
+                    return 0;
+                }
+
+                // ========================================
+                // PASO 1: GUARDAR PACIENTE EN BD
+                // ========================================
+                int idPaciente = GuardarPaciente(cedula, nombre, apellido, genero, email, telefono, direccion, fechaNacimiento);
+
+                if (idPaciente <= 0)
+                {
+                    Alertas.Advertencia("Error al crear el paciente.");
+                    return 0;
+                }
+
+                // ========================================
+                // PASO 2: GUARDAR CITA CON ID DEL PACIENTE
+                // ========================================
+                int idCita = GuardarCita(idPaciente, idDentista, fechaCita, horaCita, estado, notas);
+
+                if (idCita <= 0)
+                {
+                    Alertas.Advertencia("Error al crear la cita.");
+                    return 0;
+                }
+
+                // ========================================
+                // ÉXITO
+                // ========================================
+                Alertas.Realizado($"Paciente '{nombre} {apellido}' y cita creados exitosamente.\nID Paciente: {idPaciente}\nID Cita: {idCita}");
+                return idCita;
+
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error inesperado: {ex.Message}");
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Guarda un paciente en la tabla Pacientes
+        /// Retorna: ID del paciente creado (0 si falla)
+        /// </summary>
+        private int GuardarPaciente(string cedula, string nombre, string apellido, string genero,
+                                    string email, string telefono, string direccion, DateTime fechaNacimiento)
+        {
+            try
+            {
+                string sqlPaciente = @"INSERT INTO Pacientes 
+                                      (Cedula, Nombre, Apellido, Genero, Email, Telefono, Direccion, Fecha_Nacimiento)
+                                      VALUES 
+                                      (@Cedula, @Nombre, @Apellido, @Genero, @Email, @Telefono, @Direccion, @FechaNacimiento)";
+
+                using (var cmd = new SqlCommand(sqlPaciente))
+                {
+                    cmd.Parameters.AddWithValue("@Cedula", cedula);
+                    cmd.Parameters.AddWithValue("@Nombre", nombre);
+                    cmd.Parameters.AddWithValue("@Apellido", apellido);
+                    cmd.Parameters.AddWithValue("@Genero", string.IsNullOrEmpty(genero) ? DBNull.Value : (object)genero);
+                    cmd.Parameters.AddWithValue("@Email", email);
+                    cmd.Parameters.AddWithValue("@Telefono", string.IsNullOrEmpty(telefono) ? DBNull.Value : (object)telefono);
+                    cmd.Parameters.AddWithValue("@Direccion", string.IsNullOrEmpty(direccion) ? DBNull.Value : (object)direccion);
+                    cmd.Parameters.AddWithValue("@FechaNacimiento", fechaNacimiento);
+
+                    int filasAfectadas = consulta.EjecutarComando(cmd);
+
+                    if (filasAfectadas <= 0)
+                    {
+                        return 0;
+                    }
+                }
+
+                // Obtener el ID del paciente recién creado
+                DataTable dtPaciente = consulta.Buscar(
+                    "Pacientes",
+                    "Id_Paciente",
+                    $"Cedula = '{cedula}' AND Nombre = '{nombre}' AND Apellido = '{apellido}'"
+                );
+
+                if (dtPaciente == null || dtPaciente.Rows.Count == 0)
+                {
+                    return 0;
+                }
+
+                int idPaciente = Convert.ToInt32(dtPaciente.Rows[0]["Id_Paciente"]);
+                return idPaciente;
+
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al guardar paciente: {ex.Message}");
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Guarda una cita en la tabla Citas
+        /// Retorna: ID de la cita creada (0 si falla)
+        /// </summary>
+        private int GuardarCita(int idPaciente, int idDentista, DateTime fechaCita, DateTime horaCita, string estado, string notas)
+        {
+            try
+            {
+                string sqlCita = @"INSERT INTO Citas 
+                                  (Id_Paciente, Id_Dentista, Fecha_Cita, Hora_Cita, Estado, Notas)
+                                  VALUES 
+                                  (@IdPaciente, @IdDentista, @FechaCita, @HoraCita, @Estado, @Notas)";
+
+                using (var cmd = new SqlCommand(sqlCita))
+                {
+                    cmd.Parameters.AddWithValue("@IdPaciente", idPaciente);
+                    cmd.Parameters.AddWithValue("@IdDentista", idDentista);
+                    cmd.Parameters.AddWithValue("@FechaCita", fechaCita.Date);
+                    cmd.Parameters.AddWithValue("@HoraCita", horaCita);
+                    cmd.Parameters.AddWithValue("@Estado", estado);
+                    cmd.Parameters.AddWithValue("@Notas", string.IsNullOrEmpty(notas) ? DBNull.Value : (object)notas);
+
+                    int filasAfectadas = consulta.EjecutarComando(cmd);
+
+                    if (filasAfectadas <= 0)
+                    {
+                        return 0;
+                    }
+                }
+
+                // Obtener el ID de la cita recién creada
+                DataTable dtCita = consulta.Buscar(
+                    "Citas",
+                    "MAX(Id_Cita) AS Id_Cita",
+                    ""
+                );
+
+                if (dtCita == null || dtCita.Rows.Count == 0)
+                {
+                    return 0;
+                }
+
+                int idCita = Convert.ToInt32(dtCita.Rows[0]["Id_Cita"]);
+                return idCita;
+
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al guardar cita: {ex.Message}");
+                return 0;
+            }
+        }
+
+        /// <summary>
+        /// Muestra todas las citas con información del paciente y dentista
+        /// Retorna: DataTable con las citas (null si hay error)
+        /// </summary>
+        public DataTable MostrarCitas()
+        {
+            try
+            {
+                string sql = @"SELECT c.Id_Cita, 
+                                     p.Nombre as Paciente, 
+                                     p.Apellido, 
+                                     d.Nombre as Dentista, 
+                                     c.Fecha_Cita, 
+                                     c.Hora_Cita, 
+                                     c.Estado, 
+                                     c.Notas
+                              FROM Citas c
+                              INNER JOIN Pacientes p ON c.Id_Paciente = p.Id_Paciente
+                              INNER JOIN Dentistas d ON c.Id_Dentista = d.Id_Dentista
+                              ORDER BY c.Fecha_Cita DESC";
+
+                DataTable dt = consulta.EjecutarConsultaSelect(sql);
+
+                if (dt == null || dt.Rows.Count == 0)
+                {
+                    Alertas.Advertencia("No hay citas registradas.");
+                    return dt;
+                }
+
+                return dt;
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al mostrar citas: {ex.Message}");
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Obtiene los dentistas disponibles para el combobox
+        /// Retorna: DataTable con Id_Dentista y Nombre
+        /// </summary>
+        public DataTable ObtenerDentistas()
+        {
+            try
+            {
+                return consulta.Buscar("Dentistas", "Id_Dentista, Nombre, Apellido", "Estado = 'Activo'");
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar dentistas: {ex.Message}");
+                return null;
+            }
+        }
+
+        /// <summary>
+        /// Elimina una cita por su ID
+        /// Retorna: true si se eliminó exitosamente, false si falla
+        /// </summary>
+        public bool EliminarCita(int idCita)
+        {
+            try
+            {
+                if (idCita <= 0)
+                {
+                    Alertas.Advertencia("Seleccione una cita válida.");
+                    return false;
+                }
+
+                if (!Alertas.Confirmacion($"¿Está seguro de que desea eliminar la cita #{idCita}?"))
+                {
+                    return false;
+                }
+
+                int filasAfectadas = consulta.Eliminar("Citas", $"Id_Cita = {idCita}");
+
+                if (filasAfectadas > 0)
+                {
+                    Alertas.Realizado("Cita eliminada exitosamente.");
+                    return true;
+                }
+                else
+                {
+                    Alertas.Advertencia("Error al eliminar la cita.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al eliminar cita: {ex.Message}");
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Actualiza el estado de una cita
+        /// Retorna: true si se actualizó exitosamente, false si falla
+        /// </summary>
+        public bool ActualizarEstadoCita(int idCita, string nuevoEstado)
+        {
+            try
+            {
+                if (idCita <= 0 || string.IsNullOrEmpty(nuevoEstado))
+                {
+                    Alertas.Advertencia("Datos inválidos para actualizar la cita.");
+                    return false;
+                }
+
+                int filasAfectadas = consulta.update("Citas", $"Estado = '{nuevoEstado}'", $"Id_Cita = {idCita}");
+
+                if (filasAfectadas > 0)
+                {
+                    Alertas.Realizado($"Estado de cita actualizado a: {nuevoEstado}");
+                    return true;
+                }
+                else
+                {
+                    Alertas.Advertencia("Error al actualizar la cita.");
+                    return false;
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al actualizar cita: {ex.Message}");
+                return false;
+            }
+        }
+    }
+}

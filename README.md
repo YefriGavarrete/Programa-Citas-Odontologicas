@@ -1,6 +1,6 @@
 ﻿# Sistema de Gestión de Citas Odontológicas
 
-## 📋 Descripción General
+## Descripción General
 
 Sistema de Gestión de Citas Odontológicas es una aplicación de escritorio desarrollada en **C# con Windows Forms** utilizando la librería de diseño **Guna** para una interfaz moderna y profesional. El sistema permite gestionar usuarios, pacientes, dentistas, especialidades y citas en una clínica dental.
 
@@ -11,7 +11,7 @@ Sistema de Gestión de Citas Odontológicas es una aplicación de escritorio des
 
 ---
 
-## 🎯 Características Implementadas
+## Características Implementadas
 
 ### 1. **Autenticación y Control de Acceso**
 - ✅ Formulario de Login seguro
@@ -28,24 +28,24 @@ Sistema de Gestión de Citas Odontológicas es una aplicación de escritorio des
 - ✅ Visualización de lista de usuarios activos e inactivos
 
 ### 3. **Gestión de Pacientes**
-- 🔧 Formulario base implementado
-- ⏳ Funcionalidades en desarrollo
+- Formulario base implementado
+- Funcionalidades en desarrollo
 
 ### 4. **Gestión de Citas**
-- 🔧 Formulario base implementado
-- ⏳ Funcionalidades en desarrollo
+- Formulario base implementado
+- Funcionalidades en desarrollo
 
 ### 5. **Gestión de Dentistas**
-- 🔧 Formulario base implementado
-- ⏳ Funcionalidades en desarrollo
+- Formulario base implementado
+- Funcionalidades en desarrollo
 
 ### 6. **Gestión de Especialidades**
-- 🔧 Formulario base implementado
-- ⏳ Funcionalidades en desarrollo
+- Formulario base implementado
+- Funcionalidades en desarrollo
 
 ---
 
-## 🏗️ Arquitectura y Estructura del Proyecto
+## Arquitectura y Estructura del Proyecto
 
 El proyecto sigue el patrón **MVC (Model-View-Controller)** para mantener la separación de responsabilidades y garantizar escalabilidad.
 
@@ -97,7 +97,7 @@ Sistema/
 
 ---
 
-## 🔒 Métodos de Seguridad Implementados
+## Métodos de Seguridad Implementados
 
 ### 1. **Hash de Contraseñas con PBKDF2**
 **Ubicación:** `Clases/ClaseUsuarios/SalHash.cs`
@@ -147,7 +147,7 @@ public static class UsuarioLogeado
 
 
 
-## 🚀 Cómo Usar la Aplicación
+## Cómo Usar la Aplicación
 
 ### Requisitos Previos
 - Visual Studio 2019 o superior
@@ -207,7 +207,7 @@ nuget restore
 ---
 
 
-## 🛠️ Extensibilidad y Escalabilidad
+## Extensibilidad y Escalabilidad
 
 ### Patrones Utilizados
 
@@ -228,7 +228,7 @@ nuget restore
 - Las clases reciben sus dependencias
 - Facilita testing y mantenimiento
 
-## 🎨 Tecnologías y Librerías
+## Tecnologías y Librerías
 
 | Tecnología | Versión | Propósito |
 |-----------|---------|----------|
@@ -241,7 +241,7 @@ nuget restore
 
 ---
 
-## 📊 Diagrama de Flujo - Autenticación
+## Diagrama de Flujo - Autenticación
 
 ```
 ┌─────────────────┐
@@ -287,7 +287,7 @@ MenuForm  LoginForm
 ---
 Proyecto: Sistema de Gestión de Citas Odontológicas
 
-## 📌 Notas Importantes
+## Notas Importantes
 
 1. **No Almacenar Contraseñas en Texto Plano:** Siempre usar `SalHash.ComputeHash()`
 2. **Usar Parámetros SQL:** Nunca concatenar cadenas en queries

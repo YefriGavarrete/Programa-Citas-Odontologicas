@@ -1,101 +1,97 @@
-﻿using Sistema.Clases;
+using Sistema.Clases;
+using Sistema.Clases.ClasesCitas;
 using Sistema.Formularios;
 using Sistema.Formularios.FormDentistas;
+using Sistema.Formularios.FormPacientes;
 using Sistema.Formularios.FormUsuarios;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Sistema.FormLoginMenu
 {
     public partial class MenuForm : Form
     {
-        int m , mx, my;
+        int m, mx, my;
+        const int AnchoBtnNormal = 160;
+        const int AnchoBtnActivo = 180;
+        const int AlturaBtn      = 34;
 
         public MenuForm()
         {
             InitializeComponent();
+            MarcarBotonActivo(btnInicioMenu);
 
-            btnInicioMenu.FillColor = Color.DodgerBlue;
-            btnInicioMenu.Size = new Size(175, 34);
+            lblUsuario.Text = $"{UsuarioLogeado.Nombre} {UsuarioLogeado.Apellido}  —  {UsuarioLogeado.Rol}";
+        }
+        void AbrirFormEnPanel(Form form)
+        {
+            if (panelContenedor.Controls.Count > 0)
+                panelContenedor.Controls.RemoveAt(0);
 
-            lblUsuario.Text = $"{UsuarioLogeado.Nombre + " " + UsuarioLogeado.Apellido + " - " + UsuarioLogeado.Rol}";
+            form.TopLevel = false;
+            form.Dock     = DockStyle.Fill;
+            panelContenedor.Controls.Add(form);
+            panelContenedor.Tag = form;
+            form.Show();
         }
 
-        void AbrirFormEnPanel(object Formhijo)
+        void MarcarBotonActivo(Guna.UI2.WinForms.Guna2Button btnActivo)
         {
-            if (this.panelContenedor.Controls.Count > 0)
-                this.panelContenedor.Controls.RemoveAt(0);
-            Form fh = Formhijo as Form;
-            fh.TopLevel = false;
-            fh.Dock = DockStyle.Fill;
-            this.panelContenedor.Controls.Add(fh);
-            this.panelContenedor.Tag = fh;
-            fh.Show();
-        }
+            var botones = new[]
+            {
+                btnInicioMenu, btnCitas, btnPacientes,
+                btnDentistas, btnEspecialidades, btnUsuarios
+            };
 
-        void btnInteractivo(Form form)
-        {
-            // cambiar de color el boton seleccionado segun el formulario abierto
-            Color defaul = Color.SlateGray;
-            Color activo = Color.DodgerBlue;
-
-            // lista de botones del menu lateral
-            var botones = new[] { btnInicioMenu, btnCitas, btnPacientes, btnDentistas, btnEspecialidades, btnUsuarios };
-
-            // resetear todos a color por defecto
             foreach (var btn in botones)
             {
-                if (btn != null)
-                {
-                    btn.FillColor = defaul;
-                    btn.ForeColor = Color.White;
-                    btn.Size = new Size(160, 34);
-                }
+                if (btn == null) continue;
+                btn.FillColor = Color.SlateGray;
+                btn.ForeColor = Color.White;
+                btn.Size      = new Size(AnchoBtnNormal, AlturaBtn);
             }
 
-            if (form == null)
-                return; // sin formulario activo
+            if (btnActivo == null) return;
 
-            // marcar boton activo segun el tipo de formulario
-            if(form is InicioLOGO)
-            {
-                btnInicioMenu.FillColor = activo;
-                btnInicioMenu.Size = new Size(175, 34);
-            }
-            else if (form is FormCrearUsuarios)
-            {
-                btnUsuarios.FillColor = activo;
-                btnUsuarios.Size = new Size(175, 34);
-            }
-            else if (form is DentistasForm)
-            {
-                btnDentistas.FillColor = activo;
-                btnDentistas.Size = new Size(175, 34);
-            }
+            btnActivo.FillColor = Color.DodgerBlue;
+            btnActivo.ForeColor = Color.White;
+            btnActivo.Size      = new Size(AnchoBtnActivo, AlturaBtn);
         }
 
-        void newFomr(Form newFORM)
+
+        private void btnInicioMenu_Click(object sender, EventArgs e)
         {
-            newFORM.ShowDialog();
+            AbrirFormEnPanel(new InicioLOGO());
+            MarcarBotonActivo(btnInicioMenu);
         }
 
-        private void inicoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void btnCitas_Click(object sender, EventArgs e)
         {
-            newFomr(new FormCrearUsuarios());
+            AbrirFormEnPanel(new CitasForm());
+            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnCitas)));
         }
 
-        private void panel2_MouseDown(object sender, MouseEventArgs e)
+        private void btnPacientes_Click(object sender, EventArgs e)
         {
-            m = 1;
-            mx = e.X;
-            my = e.Y;
+        }
+
+        private void btnDentistas_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new DentistasForm());
+            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnDentistas)));
+        }
+
+        private void btnEspecialidades_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new EspecialidadesForm());
+            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnEspecialidades)));
+        }
+
+        private void btnUsuarios_Click(object sender, EventArgs e)
+        {
+            AbrirFormEnPanel(new FormCrearUsuarios());
+            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnUsuarios)));
         }
 
         private void btnCerrar_Click(object sender, EventArgs e)
@@ -108,45 +104,34 @@ namespace Sistema.FormLoginMenu
             this.WindowState = FormWindowState.Minimized;
         }
 
-        private void btnUsuarios_Click(object sender, EventArgs e)
+        private void panel2_MouseDown(object sender, MouseEventArgs e)
         {
-            var form = new FormCrearUsuarios();
-            AbrirFormEnPanel(form);
-            btnInteractivo(form);
-        }
-
-        private void btnInicioMenu_Click(object sender, EventArgs e)
-        {
-            var form = new InicioLOGO();
-            AbrirFormEnPanel(form);
-            btnInteractivo(form);
-        }
-
-        private void btnDentistas_Click(object sender, EventArgs e)
-        {
-            var form = new DentistasForm();
-            AbrirFormEnPanel(form);
-            btnInteractivo(form);
-        }
-
-        private void MenuForm_Load(object sender, EventArgs e)
-        {
-            string user = UsuarioLogeado.Rol;
-            if (user == "Recepcionista")
-                btnUsuarios.Visible = false;
+            m  = 1;
+            mx = e.X;
+            my = e.Y;
         }
 
         private void panel2_MouseMove(object sender, MouseEventArgs e)
         {
             if (m == 1)
-            {
                 this.SetDesktopLocation(MousePosition.X - mx, MousePosition.Y - my);
-            }
         }
 
         private void panel2_MouseUp(object sender, MouseEventArgs e)
         {
             m = 0;
+        }
+
+        private void MenuForm_Load(object sender, EventArgs e)
+        {
+            // Recepcionistas no pueden gestionar usuarios
+            if (UsuarioLogeado.Rol == "Recepcionista")
+                btnUsuarios.Visible = false;
+        }
+        private void inicoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            MarcarBotonActivo(btnUsuarios);
+            AbrirFormEnPanel(new FormCrearUsuarios());
         }
     }
 }

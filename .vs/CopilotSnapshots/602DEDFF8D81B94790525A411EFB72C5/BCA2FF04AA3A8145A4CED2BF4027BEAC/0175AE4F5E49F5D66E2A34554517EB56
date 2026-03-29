@@ -1,0 +1,238 @@
+﻿using Sistema.Clases;
+using Sistema.Clases.ClasesCitas;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+
+namespace Sistema.Formularios.FormPacientes
+{
+    /// <summary>
+    /// Vista de Citas - Solo interfaz de usuario
+    /// Sigue patrón MVC: Esta clase solo maneja UI
+    /// 
+    /// ⚠️ IMPORTANTE: Los controles del formulario deben estar definidos en el Designer
+    /// Cuando agregues los controles en CitasForm.Designer.cs, descomenta los métodos
+    /// y asegúrate que los nombres de los controles coincidan con los usados aquí.
+    /// </summary>
+    public partial class CitasForm : Form
+    {
+        // Controlador de Citas
+        Citas controladorCitas = new Citas();
+        AlertasDelSistema Alertas = new AlertasDelSistema();
+
+        public CitasForm()
+        {
+            InitializeComponent();
+            // Cuando el Designer esté completo, descomenta esto:
+            // CargarDatos();
+        }
+
+        /*
+        /// <summary>
+        /// Carga los datos iniciales del formulario (dentistas, estados, etc.)
+        /// DESCOMENTA cuando el Designer tenga todos los controles
+        /// </summary>
+        private void CargarDatos()
+        {
+            try
+            {
+                // Cargar dentistas en el combobox
+                DataTable dtDentistas = controladorCitas.ObtenerDentistas();
+                if (dtDentistas != null && dtDentistas.Rows.Count > 0)
+                {
+                    cmbDentista.DataSource = dtDentistas;
+                    cmbDentista.DisplayMember = "Nombre";
+                    cmbDentista.ValueMember = "Id_Dentista";
+                }
+
+                // Cargar estados de cita
+                cmbEstado.Items.AddRange(new object[] { "Pendiente", "Confirmada", "Completada", "Cancelada" });
+                cmbEstado.SelectedIndex = 0;
+
+                // Mostrar citas existentes
+                ActualizarGridCitas();
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar datos: {ex.Message}");
+            }
+        }
+        */
+
+        /// <summary>
+        /// Método principal que gestiona el flujo completo
+        /// Recolecta datos del formulario y llama al controlador
+        /// 
+        /// DESCOMENTA cuando el Designer tenga todos los controles necesarios:
+        /// - Datos Paciente: txtCedula, txtNombre, txtApellido, txtEmail, txtTelefono, txtDireccion
+        /// - Combobox: cmbGenero, cmbDentista, cmbEstado
+        /// - DateTimePicker: dtpFechaNacimiento, dtpFechaCita, dtpHoraCita
+        /// - TextBox: txtNotas
+        /// - DataGridView: dgvCitas
+        /// </summary>
+        public void GuardarPacienteYCita()
+        {
+            try
+            {
+                // RECOPILAR DATOS DEL FORMULARIO
+                /*
+                string cedula = txtCedula.Text.Trim();
+                string nombre = txtNombre.Text.Trim();
+                string apellido = txtApellido.Text.Trim();
+                string genero = cmbGenero.SelectedItem?.ToString() ?? "";
+                string email = txtEmail.Text.Trim();
+                string telefono = txtTelefono.Text.Trim();
+                string direccion = txtDireccion.Text.Trim();
+                DateTime fechaNacimiento = dtpFechaNacimiento.Value;
+
+                int idDentista = cmbDentista.SelectedValue != null ? Convert.ToInt32(cmbDentista.SelectedValue) : 0;
+                DateTime fechaCita = dtpFechaCita.Value;
+                DateTime horaCita = dtpHoraCita.Value;
+                string estado = cmbEstado.SelectedItem?.ToString() ?? "";
+                string notas = txtNotas.Text.Trim();
+
+                // LLAMAR AL CONTROLADOR PARA GUARDAR TODO
+                int idCita = controladorCitas.GuardarPacienteYCita(
+                    cedula, nombre, apellido, genero,
+                    email, telefono, direccion, fechaNacimiento,
+                    idDentista, fechaCita, horaCita, estado, notas
+                );
+
+                // SI GUARDÓ EXITOSAMENTE
+                if (idCita > 0)
+                {
+                    LimpiarFormulario();
+                    ActualizarGridCitas();
+                }
+                */
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error inesperado: {ex.Message}");
+            }
+        }
+
+        /// <summary>
+        /// Evento del botón Guardar
+        /// DESCOMENTA cuando agregues el botón en el Designer
+        /// </summary>
+        /*
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            GuardarPacienteYCita();
+        }
+        */
+
+        /// <summary>
+        /// Evento del botón Cancelar
+        /// DESCOMENTA cuando agregues el botón en el Designer
+        /// </summary>
+        /*
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            LimpiarFormulario();
+        }
+        */
+
+        /// <summary>
+        /// Limpia todos los campos del formulario
+        /// DESCOMENTA cuando el Designer tenga los controles
+        /// </summary>
+        /*
+        private void LimpiarFormulario()
+        {
+            try
+            {
+                txtCedula.Text = string.Empty;
+                txtNombre.Text = string.Empty;
+                txtApellido.Text = string.Empty;
+                txtEmail.Text = string.Empty;
+                txtTelefono.Text = string.Empty;
+                txtDireccion.Text = string.Empty;
+                txtNotas.Text = string.Empty;
+                cmbGenero.SelectedIndex = -1;
+                cmbDentista.SelectedIndex = 0;
+                cmbEstado.SelectedIndex = 0;
+                dtpFechaCita.Value = DateTime.Now;
+                dtpHoraCita.Value = DateTime.Now;
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al limpiar formulario: {ex.Message}");
+            }
+        }
+        */
+
+        /// <summary>
+        /// Actualiza el DataGridView con las citas existentes
+        /// Llama al controlador Citas.cs para obtener los datos
+        /// DESCOMENTA cuando el Designer tenga dgvCitas
+        /// </summary>
+        /*
+        private void ActualizarGridCitas()
+        {
+            try
+            {
+                DataTable dt = controladorCitas.MostrarCitas();
+
+                if (dt != null && dt.Rows.Count > 0)
+                {
+                    dgvCitas.DataSource = dt;
+                    dgvCitas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    dgvCitas.Refresh();
+                }
+                else
+                {
+                    dgvCitas.DataSource = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al actualizar citas: {ex.Message}");
+            }
+        }
+        */
+
+        /// <summary>
+        /// Evento cuando se hace doble clic en una fila del grid
+        /// Carga los datos de la cita para editarla
+        /// DESCOMENTA cuando el Designer tenga dgvCitas
+        /// </summary>
+        /*
+        private void dgvCitas_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {
+                    DataGridViewRow fila = dgvCitas.Rows[e.RowIndex];
+                    
+                    // Cargar datos en el formulario para edición
+                    txtNombre.Text = fila.Cells["Paciente"].Value?.ToString() ?? "";
+                    txtApellido.Text = fila.Cells["Apellido"].Value?.ToString() ?? "";
+                }
+            }
+            catch (Exception ex)
+            {
+                Alertas.Advertencia($"Error al cargar cita: {ex.Message}");
+            }
+        }
+        */
+
+        private void btnCerrar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Minimizar_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+    }
+}
