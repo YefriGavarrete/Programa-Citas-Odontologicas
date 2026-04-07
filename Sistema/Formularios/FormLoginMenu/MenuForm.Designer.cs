@@ -67,9 +67,8 @@
             this.panel2.Cursor = System.Windows.Forms.Cursors.Default;
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1376, 48);
+            this.panel2.Size = new System.Drawing.Size(1107, 39);
             this.panel2.TabIndex = 1;
             this.panel2.MouseDown += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseDown);
             this.panel2.MouseMove += new System.Windows.Forms.MouseEventHandler(this.panel2_MouseMove);
@@ -80,10 +79,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.Silver;
-            this.label1.Location = new System.Drawing.Point(21, 14);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(16, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(403, 19);
+            this.label1.Size = new System.Drawing.Size(323, 16);
             this.label1.TabIndex = 7;
             this.label1.Text = "AgendaSonrisas - Sistema de Citas Odontólogicas";
             // 
@@ -92,30 +90,27 @@
             this.lblUsuario.AutoSize = true;
             this.lblUsuario.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblUsuario.ForeColor = System.Drawing.Color.CornflowerBlue;
-            this.lblUsuario.Location = new System.Drawing.Point(933, 14);
-            this.lblUsuario.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblUsuario.Location = new System.Drawing.Point(778, 12);
             this.lblUsuario.Name = "lblUsuario";
-            this.lblUsuario.Size = new System.Drawing.Size(280, 22);
+            this.lblUsuario.Size = new System.Drawing.Size(216, 18);
             this.lblUsuario.TabIndex = 6;
             this.lblUsuario.Text = "Nombre Apellido - RolUsuario";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(891, 1);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(746, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(40, 44);
+            this.pictureBox1.Size = new System.Drawing.Size(30, 36);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
             // guna2Separator1
             // 
-            this.guna2Separator1.Location = new System.Drawing.Point(1, 41);
-            this.guna2Separator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Separator1.Location = new System.Drawing.Point(1, 33);
             this.guna2Separator1.Name = "guna2Separator1";
-            this.guna2Separator1.Size = new System.Drawing.Size(1400, 12);
+            this.guna2Separator1.Size = new System.Drawing.Size(1150, 10);
             this.guna2Separator1.TabIndex = 3;
             // 
             // Minimizar
@@ -132,10 +127,9 @@
             this.Minimizar.ForeColor = System.Drawing.Color.DodgerBlue;
             this.Minimizar.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
             this.Minimizar.HoverState.ForeColor = System.Drawing.Color.White;
-            this.Minimizar.Location = new System.Drawing.Point(1252, 5);
-            this.Minimizar.Margin = new System.Windows.Forms.Padding(4);
+            this.Minimizar.Location = new System.Drawing.Point(1017, 5);
             this.Minimizar.Name = "Minimizar";
-            this.Minimizar.Size = new System.Drawing.Size(53, 36);
+            this.Minimizar.Size = new System.Drawing.Size(40, 29);
             this.Minimizar.TabIndex = 4;
             this.Minimizar.Text = "-";
             this.Minimizar.Click += new System.EventHandler(this.Minimizar_Click);
@@ -154,10 +148,9 @@
             this.btnCerrar.ForeColor = System.Drawing.Color.DodgerBlue;
             this.btnCerrar.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
             this.btnCerrar.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCerrar.Location = new System.Drawing.Point(1311, 5);
-            this.btnCerrar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCerrar.Location = new System.Drawing.Point(1061, 5);
             this.btnCerrar.Name = "btnCerrar";
-            this.btnCerrar.Size = new System.Drawing.Size(53, 36);
+            this.btnCerrar.Size = new System.Drawing.Size(40, 29);
             this.btnCerrar.TabIndex = 3;
             this.btnCerrar.Text = "X";
             this.btnCerrar.Click += new System.EventHandler(this.btnCerrar_Click);
@@ -173,18 +166,16 @@
             this.panel1.Controls.Add(this.btnCitas);
             this.panel1.Controls.Add(this.btnInicioMenu);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.panel1.Location = new System.Drawing.Point(0, 48);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(0, 39);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(287, 631);
+            this.panel1.Size = new System.Drawing.Size(215, 513);
             this.panel1.TabIndex = 2;
             // 
             // guna2VSeparator1
             // 
-            this.guna2VSeparator1.Location = new System.Drawing.Point(279, -7);
-            this.guna2VSeparator1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2VSeparator1.Location = new System.Drawing.Point(209, -6);
             this.guna2VSeparator1.Name = "guna2VSeparator1";
-            this.guna2VSeparator1.Size = new System.Drawing.Size(13, 631);
+            this.guna2VSeparator1.Size = new System.Drawing.Size(10, 520);
             this.guna2VSeparator1.TabIndex = 3;
             // 
             // btnUsuarios
@@ -195,10 +186,9 @@
             this.btnUsuarios.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnUsuarios.ForeColor = System.Drawing.Color.White;
             this.btnUsuarios.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnUsuarios.Location = new System.Drawing.Point(25, 367);
-            this.btnUsuarios.Margin = new System.Windows.Forms.Padding(4);
+            this.btnUsuarios.Location = new System.Drawing.Point(19, 307);
             this.btnUsuarios.Name = "btnUsuarios";
-            this.btnUsuarios.Size = new System.Drawing.Size(213, 42);
+            this.btnUsuarios.Size = new System.Drawing.Size(160, 34);
             this.btnUsuarios.TabIndex = 85;
             this.btnUsuarios.Text = "Usuarios";
             this.btnUsuarios.Click += new System.EventHandler(this.btnUsuarios_Click);
@@ -211,10 +201,9 @@
             this.btnEspecialidades.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnEspecialidades.ForeColor = System.Drawing.Color.White;
             this.btnEspecialidades.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnEspecialidades.Location = new System.Drawing.Point(25, 305);
-            this.btnEspecialidades.Margin = new System.Windows.Forms.Padding(4);
+            this.btnEspecialidades.Location = new System.Drawing.Point(19, 257);
             this.btnEspecialidades.Name = "btnEspecialidades";
-            this.btnEspecialidades.Size = new System.Drawing.Size(213, 42);
+            this.btnEspecialidades.Size = new System.Drawing.Size(160, 34);
             this.btnEspecialidades.TabIndex = 84;
             this.btnEspecialidades.Text = "Especialidades";
             this.btnEspecialidades.Click += new System.EventHandler(this.btnEspecialidades_Click);
@@ -227,10 +216,9 @@
             this.btnDentistas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnDentistas.ForeColor = System.Drawing.Color.White;
             this.btnDentistas.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnDentistas.Location = new System.Drawing.Point(25, 242);
-            this.btnDentistas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnDentistas.Location = new System.Drawing.Point(19, 206);
             this.btnDentistas.Name = "btnDentistas";
-            this.btnDentistas.Size = new System.Drawing.Size(213, 42);
+            this.btnDentistas.Size = new System.Drawing.Size(160, 34);
             this.btnDentistas.TabIndex = 83;
             this.btnDentistas.Text = "Odontólogos";
             this.btnDentistas.Click += new System.EventHandler(this.btnDentistas_Click);
@@ -243,12 +231,11 @@
             this.btnPacientes.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnPacientes.ForeColor = System.Drawing.Color.White;
             this.btnPacientes.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnPacientes.Location = new System.Drawing.Point(25, 175);
-            this.btnPacientes.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPacientes.Location = new System.Drawing.Point(19, 142);
             this.btnPacientes.Name = "btnPacientes";
-            this.btnPacientes.Size = new System.Drawing.Size(213, 42);
+            this.btnPacientes.Size = new System.Drawing.Size(160, 49);
             this.btnPacientes.TabIndex = 82;
-            this.btnPacientes.Text = "Pacientes";
+            this.btnPacientes.Text = "Citas Programadas";
             this.btnPacientes.Click += new System.EventHandler(this.btnPacientes_Click);
             // 
             // btnCitas
@@ -259,10 +246,9 @@
             this.btnCitas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnCitas.ForeColor = System.Drawing.Color.White;
             this.btnCitas.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnCitas.Location = new System.Drawing.Point(25, 108);
-            this.btnCitas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCitas.Location = new System.Drawing.Point(19, 88);
             this.btnCitas.Name = "btnCitas";
-            this.btnCitas.Size = new System.Drawing.Size(213, 42);
+            this.btnCitas.Size = new System.Drawing.Size(160, 34);
             this.btnCitas.TabIndex = 80;
             this.btnCitas.Text = "Citas";
             this.btnCitas.Click += new System.EventHandler(this.btnCitas_Click);
@@ -275,10 +261,9 @@
             this.btnInicioMenu.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnInicioMenu.ForeColor = System.Drawing.Color.White;
             this.btnInicioMenu.HoverState.FillColor = System.Drawing.Color.DodgerBlue;
-            this.btnInicioMenu.Location = new System.Drawing.Point(25, 42);
-            this.btnInicioMenu.Margin = new System.Windows.Forms.Padding(4);
+            this.btnInicioMenu.Location = new System.Drawing.Point(19, 34);
             this.btnInicioMenu.Name = "btnInicioMenu";
-            this.btnInicioMenu.Size = new System.Drawing.Size(213, 42);
+            this.btnInicioMenu.Size = new System.Drawing.Size(160, 34);
             this.btnInicioMenu.TabIndex = 80;
             this.btnInicioMenu.Text = "Inicio";
             this.btnInicioMenu.Click += new System.EventHandler(this.btnInicioMenu_Click);
@@ -297,10 +282,9 @@
             this.panelContenedor.BackColor = System.Drawing.Color.White;
             this.panelContenedor.Controls.Add(this.LogoInicio);
             this.panelContenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelContenedor.Location = new System.Drawing.Point(287, 48);
-            this.panelContenedor.Margin = new System.Windows.Forms.Padding(4);
+            this.panelContenedor.Location = new System.Drawing.Point(215, 39);
             this.panelContenedor.Name = "panelContenedor";
-            this.panelContenedor.Size = new System.Drawing.Size(1089, 631);
+            this.panelContenedor.Size = new System.Drawing.Size(892, 513);
             this.panelContenedor.TabIndex = 3;
             // 
             // LogoInicio
@@ -308,27 +292,24 @@
             this.LogoInicio.Dock = System.Windows.Forms.DockStyle.Fill;
             this.LogoInicio.Image = ((System.Drawing.Image)(resources.GetObject("LogoInicio.Image")));
             this.LogoInicio.Location = new System.Drawing.Point(0, 0);
-            this.LogoInicio.Margin = new System.Windows.Forms.Padding(4);
             this.LogoInicio.Name = "LogoInicio";
-            this.LogoInicio.Size = new System.Drawing.Size(1089, 631);
+            this.LogoInicio.Size = new System.Drawing.Size(892, 513);
             this.LogoInicio.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.LogoInicio.TabIndex = 7;
             this.LogoInicio.TabStop = false;
             // 
             // MenuForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1376, 679);
+            this.ClientSize = new System.Drawing.Size(1107, 552);
             this.Controls.Add(this.panelContenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "MenuForm";
-            this.ShowIcon = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Load += new System.EventHandler(this.MenuForm_Load);
             this.panel2.ResumeLayout(false);

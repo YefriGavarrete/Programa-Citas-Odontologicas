@@ -36,7 +36,7 @@ namespace Sistema.FormLoginMenu
             form.Show();
         }
 
-        void MarcarBotonActivo(Guna.UI2.WinForms.Guna2Button btnActivo)
+        public void MarcarBotonActivo(Guna.UI2.WinForms.Guna2Button btnActivo)
         {
             var botones = new[]
             {
@@ -49,14 +49,22 @@ namespace Sistema.FormLoginMenu
                 if (btn == null) continue;
                 btn.FillColor = Color.SlateGray;
                 btn.ForeColor = Color.White;
-                btn.Size      = new Size(AnchoBtnNormal, AlturaBtn);
+
+                if (btn == btnPacientes)
+                    btn.Size = new Size(AnchoBtnNormal, 49);
+                else
+                    btn.Size      = new Size(AnchoBtnNormal, AlturaBtn);
             }
 
             if (btnActivo == null) return;
 
             btnActivo.FillColor = Color.DodgerBlue;
             btnActivo.ForeColor = Color.White;
-            btnActivo.Size      = new Size(AnchoBtnActivo, AlturaBtn);
+
+            if (btnActivo == btnPacientes)
+                btnActivo.Size      = new Size(AnchoBtnActivo, 49);
+            else
+                btnActivo.Size = new Size(AnchoBtnActivo, AlturaBtn);
         }
 
 
@@ -72,8 +80,10 @@ namespace Sistema.FormLoginMenu
             this.BeginInvoke((Action)(() => MarcarBotonActivo(btnCitas)));
         }
 
-        private void btnPacientes_Click(object sender, EventArgs e)
+        public void btnPacientes_Click(object sender, EventArgs e)
         {
+            AbrirFormEnPanel(new PacientesForm());
+            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnPacientes)));
         }
 
         private void btnDentistas_Click(object sender, EventArgs e)
