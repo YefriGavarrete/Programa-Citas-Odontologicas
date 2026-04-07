@@ -38,6 +38,9 @@ namespace Sistema.FormLogin
 
             try
             {
+                btnIngresar.Text = "Validando..."; 
+                btnIngresar.FillColor = Color.Gray;
+                btnIngresar.ForeColor = Color.LightGray;
 
                 bool acceso = consultaUsuario.BuscarUsuario("UsuariosLogin", usuario, clave);
                 if (acceso)
@@ -51,10 +54,17 @@ namespace Sistema.FormLogin
                     menu.Show();
                     this.Hide();
                 }
+
+                    btnIngresar.Text = "Ingresar";
+                    btnIngresar.FillColor = Color.DodgerBlue;
+                    btnIngresar.ForeColor = Color.White;
+                
+                    
             }
             catch(Exception ex)
             { 
                 Alertas.Advertencia($"Error al iniciar sesión: {ex.Message}");
+                btnIngresar.Text = "Ingresar";
             }
         }
 

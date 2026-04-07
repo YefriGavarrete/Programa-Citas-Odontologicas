@@ -58,6 +58,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\ClaseAlertas\AlertasDelSistema.cs" />
+    <Compile Include="Clases\ClaseDentista\DentistaModelo\DentistaMO.cs" />
+    <Compile Include="Clases\ClaseEspecialidad\EspecialidadMO.cs" />
     <Compile Include="Clases\ClasesCitas\Citas.cs" />
     <Compile Include="Clases\ClasesCitas\CitasModel.cs" />
     <Compile Include="Clases\ClaseUsuarios\SalHash.cs" />
@@ -70,6 +72,18 @@
     </Compile>
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormDentistas\DentistasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormDentistas\DentistasForm.Designer.cs">
+      <DependentUpon>DentistasForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Formularios\FormDentistas\EspecialidadesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormDentistas\EspecialidadesForm.Designer.cs">
+      <DependentUpon>EspecialidadesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormLoginMenu\InicioLOGO.cs">
       <SubType>Form</SubType>
@@ -88,18 +102,6 @@
     </Compile>
     <Compile Include="Formularios\FormLoginMenu\MenuForm.Designer.cs">
       <DependentUpon>MenuForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FormDentistas\DentistasForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormDentistas\DentistasForm.Designer.cs">
-      <DependentUpon>DentistasForm.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Formularios\FormDentistas\EspecialidadesForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Formularios\FormDentistas\EspecialidadesForm.Designer.cs">
-      <DependentUpon>EspecialidadesForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Formularios\FormPacientes\CitasForm.cs">
       <SubType>Form</SubType>
@@ -126,6 +128,12 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormDentistas\DentistasForm.resx">
+      <DependentUpon>DentistasForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormDentistas\EspecialidadesForm.resx">
+      <DependentUpon>EspecialidadesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormLoginMenu\InicioLOGO.resx">
       <DependentUpon>InicioLOGO.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,12 +142,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormLoginMenu\MenuForm.resx">
       <DependentUpon>MenuForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormDentistas\DentistasForm.resx">
-      <DependentUpon>DentistasForm.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Formularios\FormDentistas\EspecialidadesForm.resx">
-      <DependentUpon>EspecialidadesForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPacientes\CitasForm.resx">
       <DependentUpon>CitasForm.cs</DependentUpon>

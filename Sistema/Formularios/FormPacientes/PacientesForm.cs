@@ -27,10 +27,10 @@ namespace Sistema.Formularios.FormPacientes
 
         private void PacientesForm_Resize(object sender, EventArgs e)
         {
-            CentrarContenido();
+            //CentrarContenido();
         }
 
-        void CentrarContenido()
+       /* void CentrarContenido()
         {
             int anchoTotal = pnlCalendario.Width + 10 + pnlGrid.Width;
             int altoTotal  = pnlCalendario.Height;
@@ -45,7 +45,7 @@ namespace Sistema.Formularios.FormPacientes
             pnlGrid.Location       = new System.Drawing.Point(x + pnlCalendario.Width + 10, y);
 
             btnCerrar.Location = new System.Drawing.Point(this.ClientSize.Width - btnCerrar.Width - 15, 7);
-        }
+        }*/
 
    
         public void CargarCitasDia(DateTime fecha)

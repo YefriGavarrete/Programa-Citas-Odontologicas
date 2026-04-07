@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CitasForm));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.rbActivos = new Guna.UI2.WinForms.Guna2RadioButton();
             this.rbInactivos = new Guna.UI2.WinForms.Guna2RadioButton();
             this.btnCancelar = new Guna.UI2.WinForms.Guna2Button();
@@ -41,7 +41,6 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.label16 = new System.Windows.Forms.Label();
-            this.label15 = new System.Windows.Forms.Label();
             this.dgvDatos = new Guna.UI2.WinForms.Guna2DataGridView();
             this.txtApellido = new Guna.UI2.WinForms.Guna2TextBox();
             this.txtNombre = new Guna.UI2.WinForms.Guna2TextBox();
@@ -86,10 +85,9 @@
             this.rbActivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbActivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbActivos.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.rbActivos.Location = new System.Drawing.Point(875, 4);
-            this.rbActivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbActivos.Location = new System.Drawing.Point(724, 3);
             this.rbActivos.Name = "rbActivos";
-            this.rbActivos.Size = new System.Drawing.Size(74, 21);
+            this.rbActivos.Size = new System.Drawing.Size(60, 17);
             this.rbActivos.TabIndex = 97;
             this.rbActivos.Text = "Activos";
             this.rbActivos.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -107,10 +105,9 @@
             this.rbInactivos.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbInactivos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
             this.rbInactivos.ForeColor = System.Drawing.SystemColors.Highlight;
-            this.rbInactivos.Location = new System.Drawing.Point(766, 4);
-            this.rbInactivos.Margin = new System.Windows.Forms.Padding(4);
+            this.rbInactivos.Location = new System.Drawing.Point(642, 3);
             this.rbInactivos.Name = "rbInactivos";
-            this.rbInactivos.Size = new System.Drawing.Size(84, 21);
+            this.rbInactivos.Size = new System.Drawing.Size(68, 17);
             this.rbInactivos.TabIndex = 96;
             this.rbInactivos.Text = "Inactivos";
             this.rbInactivos.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -134,10 +131,9 @@
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelar.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(783, 252);
-            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCancelar.Location = new System.Drawing.Point(587, 205);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(135, 42);
+            this.btnCancelar.Size = new System.Drawing.Size(101, 34);
             this.btnCancelar.TabIndex = 91;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
@@ -150,10 +146,9 @@
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.Location = new System.Drawing.Point(640, 252);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4);
+            this.btnGuardar.Location = new System.Drawing.Point(480, 205);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(135, 42);
+            this.btnGuardar.Size = new System.Drawing.Size(101, 34);
             this.btnGuardar.TabIndex = 90;
             this.btnGuardar.Text = "Guardar";
             this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
@@ -167,12 +162,11 @@
             this.dtpFechaCita.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.dtpFechaCita.ForeColor = System.Drawing.Color.White;
             this.dtpFechaCita.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpFechaCita.Location = new System.Drawing.Point(22, 118);
-            this.dtpFechaCita.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpFechaCita.Location = new System.Drawing.Point(16, 96);
             this.dtpFechaCita.MaxDate = new System.DateTime(9998, 12, 31, 0, 0, 0, 0);
             this.dtpFechaCita.MinDate = new System.DateTime(1753, 1, 1, 0, 0, 0, 0);
             this.dtpFechaCita.Name = "dtpFechaCita";
-            this.dtpFechaCita.Size = new System.Drawing.Size(155, 44);
+            this.dtpFechaCita.Size = new System.Drawing.Size(116, 36);
             this.dtpFechaCita.TabIndex = 87;
             this.dtpFechaCita.Value = new System.DateTime(2026, 3, 28, 21, 29, 40, 313);
             // 
@@ -181,19 +175,19 @@
             this.lblHoraCita.AutoSize = true;
             this.lblHoraCita.Font = new System.Drawing.Font("Arial", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblHoraCita.ForeColor = System.Drawing.Color.Silver;
-            this.lblHoraCita.Location = new System.Drawing.Point(185, 114);
+            this.lblHoraCita.Location = new System.Drawing.Point(159, 95);
+            this.lblHoraCita.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblHoraCita.Name = "lblHoraCita";
-            this.lblHoraCita.Size = new System.Drawing.Size(81, 16);
+            this.lblHoraCita.Size = new System.Drawing.Size(71, 14);
             this.lblHoraCita.TabIndex = 113;
             this.lblHoraCita.Text = "Hora (07-17)";
             // 
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(16, 13);
-            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox1.Location = new System.Drawing.Point(12, 11);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(112, 97);
+            this.pictureBox1.Size = new System.Drawing.Size(84, 79);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBox1.TabIndex = 80;
             this.pictureBox1.TabStop = false;
@@ -205,71 +199,55 @@
             this.guna2Panel1.BorderRadius = 10;
             this.guna2Panel1.BorderThickness = 2;
             this.guna2Panel1.Controls.Add(this.label16);
-            this.guna2Panel1.Controls.Add(this.label15);
             this.guna2Panel1.Controls.Add(this.rbActivos);
             this.guna2Panel1.Controls.Add(this.rbInactivos);
             this.guna2Panel1.Controls.Add(this.dgvDatos);
             this.guna2Panel1.FillColor = System.Drawing.Color.WhiteSmoke;
-            this.guna2Panel1.Location = new System.Drawing.Point(-3, 344);
-            this.guna2Panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.guna2Panel1.Location = new System.Drawing.Point(21, 280);
             this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.Size = new System.Drawing.Size(1080, 286);
+            this.guna2Panel1.Size = new System.Drawing.Size(810, 232);
             this.guna2Panel1.TabIndex = 98;
             this.guna2Panel1.Tag = "";
             // 
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label16.ForeColor = System.Drawing.Color.Black;
-            this.label16.Location = new System.Drawing.Point(29, 4);
-            this.label16.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label16.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label16.ForeColor = System.Drawing.Color.DodgerBlue;
+            this.label16.Location = new System.Drawing.Point(9, 3);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(114, 17);
+            this.label16.Size = new System.Drawing.Size(128, 18);
             this.label16.TabIndex = 105;
             this.label16.Text = "Citas registradas";
             // 
-            // label15
-            // 
-            this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.label15.ForeColor = System.Drawing.Color.Black;
-            this.label15.Location = new System.Drawing.Point(626, 4);
-            this.label15.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(132, 17);
-            this.label15.TabIndex = 104;
-            this.label15.Text = "Filtrado por Estado:";
-            // 
             // dgvDatos
             // 
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            this.dgvDatos.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(88)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvDatos.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvDatos.ColumnHeadersHeight = 15;
             this.dgvDatos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.EnableResizing;
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle9.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
-            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(71)))), ((int)(((byte)(69)))), ((int)(((byte)(94)))));
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvDatos.DefaultCellStyle = dataGridViewCellStyle3;
             this.dgvDatos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(231)))), ((int)(((byte)(229)))), ((int)(((byte)(255)))));
-            this.dgvDatos.Location = new System.Drawing.Point(16, 29);
-            this.dgvDatos.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvDatos.Location = new System.Drawing.Point(12, 24);
             this.dgvDatos.Name = "dgvDatos";
             this.dgvDatos.RowHeadersVisible = false;
             this.dgvDatos.RowHeadersWidth = 51;
-            this.dgvDatos.Size = new System.Drawing.Size(1039, 241);
+            this.dgvDatos.Size = new System.Drawing.Size(779, 196);
             this.dgvDatos.TabIndex = 0;
             this.dgvDatos.ThemeStyle.AlternatingRowsStyle.BackColor = System.Drawing.Color.White;
             this.dgvDatos.ThemeStyle.AlternatingRowsStyle.Font = null;
@@ -306,12 +284,12 @@
             this.txtApellido.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtApellido.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtApellido.ForeColor = System.Drawing.Color.Gray;
-            this.txtApellido.Location = new System.Drawing.Point(162, 123);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(5);
+            this.txtApellido.Location = new System.Drawing.Point(113, 112);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtApellido.Name = "txtApellido";
             this.txtApellido.PlaceholderText = "Apellido Cliente";
             this.txtApellido.SelectedText = "";
-            this.txtApellido.Size = new System.Drawing.Size(197, 38);
+            this.txtApellido.Size = new System.Drawing.Size(148, 31);
             this.txtApellido.TabIndex = 86;
             // 
             // txtNombre
@@ -326,12 +304,12 @@
             this.txtNombre.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtNombre.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtNombre.ForeColor = System.Drawing.Color.Gray;
-            this.txtNombre.Location = new System.Drawing.Point(162, 41);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(5);
+            this.txtNombre.Location = new System.Drawing.Point(113, 42);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombre.Name = "txtNombre";
             this.txtNombre.PlaceholderText = "Nombre Cliente";
             this.txtNombre.SelectedText = "";
-            this.txtNombre.Size = new System.Drawing.Size(197, 38);
+            this.txtNombre.Size = new System.Drawing.Size(148, 31);
             this.txtNombre.TabIndex = 84;
             // 
             // label5
@@ -339,10 +317,9 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label5.Location = new System.Drawing.Point(158, 13);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Location = new System.Drawing.Point(109, 20);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(90, 22);
+            this.label5.Size = new System.Drawing.Size(68, 18);
             this.label5.TabIndex = 83;
             this.label5.Text = "Nombre:";
             // 
@@ -351,10 +328,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label1.Location = new System.Drawing.Point(26, 13);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(20, 11);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(86, 22);
+            this.label1.Size = new System.Drawing.Size(67, 18);
             this.label1.TabIndex = 79;
             this.label1.Text = "Dentista";
             // 
@@ -374,10 +350,9 @@
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.guna2Panel3);
             this.panel1.FillColor = System.Drawing.Color.White;
-            this.panel1.Location = new System.Drawing.Point(11, 28);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4);
+            this.panel1.Location = new System.Drawing.Point(31, 23);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1041, 308);
+            this.panel1.Size = new System.Drawing.Size(781, 250);
             this.panel1.TabIndex = 97;
             // 
             // btnCitasProgramadas
@@ -388,12 +363,12 @@
             this.btnCitasProgramadas.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnCitasProgramadas.ForeColor = System.Drawing.Color.White;
             this.btnCitasProgramadas.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnCitasProgramadas.Location = new System.Drawing.Point(16, 252);
-            this.btnCitasProgramadas.Margin = new System.Windows.Forms.Padding(4);
+            this.btnCitasProgramadas.Location = new System.Drawing.Point(12, 205);
             this.btnCitasProgramadas.Name = "btnCitasProgramadas";
-            this.btnCitasProgramadas.Size = new System.Drawing.Size(285, 44);
+            this.btnCitasProgramadas.Size = new System.Drawing.Size(214, 36);
             this.btnCitasProgramadas.TabIndex = 104;
             this.btnCitasProgramadas.Text = "[Ver Citas Programadas]";
+            this.btnCitasProgramadas.Visible = false;
             this.btnCitasProgramadas.Click += new System.EventHandler(this.btnCitasProgramadas_Click);
             // 
             // label10
@@ -401,10 +376,9 @@
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Silver;
-            this.label10.Location = new System.Drawing.Point(698, 14);
-            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Location = new System.Drawing.Point(524, 11);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(155, 19);
+            this.label10.Size = new System.Drawing.Size(127, 16);
             this.label10.TabIndex = 103;
             this.label10.Text = "Detalles de la Cita:";
             // 
@@ -413,10 +387,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Silver;
-            this.label2.Location = new System.Drawing.Point(389, 14);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(292, 11);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(159, 19);
+            this.label2.Size = new System.Drawing.Size(125, 16);
             this.label2.TabIndex = 102;
             this.label2.Text = "Datos del Dentista:";
             // 
@@ -427,9 +400,10 @@
             this.guna2Panel5.Controls.Add(this.txtObservaciones);
             this.guna2Panel5.Controls.Add(this.label14);
             this.guna2Panel5.Controls.Add(this.label13);
-            this.guna2Panel5.Location = new System.Drawing.Point(705, 37);
+            this.guna2Panel5.Location = new System.Drawing.Point(529, 30);
+            this.guna2Panel5.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel5.Name = "guna2Panel5";
-            this.guna2Panel5.Size = new System.Drawing.Size(328, 208);
+            this.guna2Panel5.Size = new System.Drawing.Size(246, 169);
             this.guna2Panel5.TabIndex = 101;
             // 
             // txtMotivo
@@ -444,12 +418,12 @@
             this.txtMotivo.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtMotivo.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtMotivo.ForeColor = System.Drawing.Color.Gray;
-            this.txtMotivo.Location = new System.Drawing.Point(17, 37);
-            this.txtMotivo.Margin = new System.Windows.Forms.Padding(5);
+            this.txtMotivo.Location = new System.Drawing.Point(13, 30);
+            this.txtMotivo.Margin = new System.Windows.Forms.Padding(4);
             this.txtMotivo.Name = "txtMotivo";
             this.txtMotivo.PlaceholderText = "Motivo Cita";
             this.txtMotivo.SelectedText = "";
-            this.txtMotivo.Size = new System.Drawing.Size(294, 68);
+            this.txtMotivo.Size = new System.Drawing.Size(220, 55);
             this.txtMotivo.TabIndex = 108;
             // 
             // txtObservaciones
@@ -464,12 +438,12 @@
             this.txtObservaciones.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtObservaciones.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtObservaciones.ForeColor = System.Drawing.Color.Gray;
-            this.txtObservaciones.Location = new System.Drawing.Point(17, 141);
-            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(5);
+            this.txtObservaciones.Location = new System.Drawing.Point(13, 115);
+            this.txtObservaciones.Margin = new System.Windows.Forms.Padding(4);
             this.txtObservaciones.Name = "txtObservaciones";
             this.txtObservaciones.PlaceholderText = "Observaciones";
             this.txtObservaciones.SelectedText = "";
-            this.txtObservaciones.Size = new System.Drawing.Size(294, 50);
+            this.txtObservaciones.Size = new System.Drawing.Size(220, 41);
             this.txtObservaciones.TabIndex = 107;
             // 
             // label14
@@ -477,10 +451,9 @@
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label14.Location = new System.Drawing.Point(14, 114);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Location = new System.Drawing.Point(10, 93);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(158, 22);
+            this.label14.Size = new System.Drawing.Size(120, 18);
             this.label14.TabIndex = 106;
             this.label14.Text = "Observaciones:";
             // 
@@ -489,10 +462,9 @@
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label13.Location = new System.Drawing.Point(13, 13);
-            this.label13.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label13.Location = new System.Drawing.Point(10, 11);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(149, 22);
+            this.label13.Size = new System.Drawing.Size(115, 18);
             this.label13.TabIndex = 104;
             this.label13.Text = "Motivo de Cita:";
             // 
@@ -507,17 +479,20 @@
             this.guna2Panel4.Controls.Add(this.cmbDentista);
             this.guna2Panel4.Controls.Add(this.dtpFechaCita);
             this.guna2Panel4.Controls.Add(this.lblHoraCita);
-            this.guna2Panel4.Location = new System.Drawing.Point(388, 37);
+            this.guna2Panel4.Location = new System.Drawing.Point(291, 30);
+            this.guna2Panel4.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel4.Name = "guna2Panel4";
-            this.guna2Panel4.Size = new System.Drawing.Size(318, 208);
+            this.guna2Panel4.Size = new System.Drawing.Size(238, 169);
             this.guna2Panel4.TabIndex = 100;
             // 
             // dtpHoraCita
             // 
             this.dtpHoraCita.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtpHoraCita.Location = new System.Drawing.Point(182, 140);
+            this.dtpHoraCita.Location = new System.Drawing.Point(158, 110);
+            this.dtpHoraCita.Margin = new System.Windows.Forms.Padding(2);
             this.dtpHoraCita.Name = "dtpHoraCita";
-            this.dtpHoraCita.Size = new System.Drawing.Size(95, 22);
+            this.dtpHoraCita.ShowUpDown = true;
+            this.dtpHoraCita.Size = new System.Drawing.Size(72, 20);
             this.dtpHoraCita.TabIndex = 87;
             this.dtpHoraCita.Value = new System.DateTime(2026, 3, 27, 21, 17, 39, 0);
             // 
@@ -529,10 +504,9 @@
             this.rbConfirmada.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbConfirmada.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbConfirmada.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rbConfirmada.Location = new System.Drawing.Point(138, 181);
-            this.rbConfirmada.Margin = new System.Windows.Forms.Padding(4);
+            this.rbConfirmada.Location = new System.Drawing.Point(104, 147);
             this.rbConfirmada.Name = "rbConfirmada";
-            this.rbConfirmada.Size = new System.Drawing.Size(101, 21);
+            this.rbConfirmada.Size = new System.Drawing.Size(78, 17);
             this.rbConfirmada.TabIndex = 110;
             this.rbConfirmada.Text = "Confirmada";
             this.rbConfirmada.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -546,10 +520,9 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.Silver;
-            this.label6.Location = new System.Drawing.Point(22, 96);
-            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Location = new System.Drawing.Point(16, 78);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(155, 19);
+            this.label6.Size = new System.Drawing.Size(127, 16);
             this.label6.TabIndex = 104;
             this.label6.Text = "Detalles de la Cita:";
             // 
@@ -561,10 +534,9 @@
             this.rbPendiente.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
             this.rbPendiente.CheckedState.InnerColor = System.Drawing.Color.White;
             this.rbPendiente.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F);
-            this.rbPendiente.Location = new System.Drawing.Point(22, 181);
-            this.rbPendiente.Margin = new System.Windows.Forms.Padding(4);
+            this.rbPendiente.Location = new System.Drawing.Point(16, 147);
             this.rbPendiente.Name = "rbPendiente";
-            this.rbPendiente.Size = new System.Drawing.Size(93, 21);
+            this.rbPendiente.Size = new System.Drawing.Size(73, 17);
             this.rbPendiente.TabIndex = 109;
             this.rbPendiente.Text = "Pendiente";
             this.rbPendiente.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -586,9 +558,10 @@
             this.cmbDentista.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.cmbDentista.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(68)))), ((int)(((byte)(88)))), ((int)(((byte)(112)))));
             this.cmbDentista.ItemHeight = 30;
-            this.cmbDentista.Location = new System.Drawing.Point(26, 38);
+            this.cmbDentista.Location = new System.Drawing.Point(20, 31);
+            this.cmbDentista.Margin = new System.Windows.Forms.Padding(2);
             this.cmbDentista.Name = "cmbDentista";
-            this.cmbDentista.Size = new System.Drawing.Size(251, 36);
+            this.cmbDentista.Size = new System.Drawing.Size(189, 36);
             this.cmbDentista.TabIndex = 97;
             // 
             // label7
@@ -596,10 +569,9 @@
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Arial", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.Color.Silver;
-            this.label7.Location = new System.Drawing.Point(19, 13);
-            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Location = new System.Drawing.Point(14, 11);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(155, 19);
+            this.label7.Size = new System.Drawing.Size(126, 16);
             this.label7.TabIndex = 98;
             this.label7.Text = "Datos del Paciente";
             // 
@@ -613,9 +585,10 @@
             this.guna2Panel3.Controls.Add(this.label4);
             this.guna2Panel3.Controls.Add(this.txtApellido);
             this.guna2Panel3.Controls.Add(this.txtNombre);
-            this.guna2Panel3.Location = new System.Drawing.Point(16, 37);
+            this.guna2Panel3.Location = new System.Drawing.Point(12, 30);
+            this.guna2Panel3.Margin = new System.Windows.Forms.Padding(2);
             this.guna2Panel3.Name = "guna2Panel3";
-            this.guna2Panel3.Size = new System.Drawing.Size(368, 208);
+            this.guna2Panel3.Size = new System.Drawing.Size(276, 169);
             this.guna2Panel3.TabIndex = 99;
             // 
             // txtID
@@ -631,12 +604,12 @@
             this.txtID.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(150)))), ((int)(((byte)(136)))));
             this.txtID.Font = new System.Drawing.Font("Arial", 11.25F);
             this.txtID.ForeColor = System.Drawing.Color.Gray;
-            this.txtID.Location = new System.Drawing.Point(58, 136);
-            this.txtID.Margin = new System.Windows.Forms.Padding(5);
+            this.txtID.Location = new System.Drawing.Point(45, 112);
+            this.txtID.Margin = new System.Windows.Forms.Padding(4);
             this.txtID.Name = "txtID";
             this.txtID.PlaceholderText = "Id";
             this.txtID.SelectedText = "";
-            this.txtID.Size = new System.Drawing.Size(63, 38);
+            this.txtID.Size = new System.Drawing.Size(47, 31);
             this.txtID.TabIndex = 78;
             // 
             // label3
@@ -644,10 +617,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label3.Location = new System.Drawing.Point(25, 144);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(17, 120);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(29, 22);
+            this.label3.Size = new System.Drawing.Size(23, 18);
             this.label3.TabIndex = 77;
             this.label3.Text = "ID";
             // 
@@ -656,36 +628,34 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.label4.Location = new System.Drawing.Point(158, 96);
-            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Location = new System.Drawing.Point(109, 90);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(92, 22);
+            this.label4.Size = new System.Drawing.Size(69, 18);
             this.label4.TabIndex = 85;
             this.label4.Text = "Apellido:";
             // 
             // lblOperacion
             // 
+            this.lblOperacion.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperacion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblOperacion.Location = new System.Drawing.Point(926, 4);
-            this.lblOperacion.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.lblOperacion.Location = new System.Drawing.Point(694, 3);
             this.lblOperacion.Name = "lblOperacion";
-            this.lblOperacion.Size = new System.Drawing.Size(107, 22);
+            this.lblOperacion.Size = new System.Drawing.Size(82, 18);
             this.lblOperacion.TabIndex = 99;
             this.lblOperacion.Text = "Operacion";
             // 
             // CitasForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ClientSize = new System.Drawing.Size(1062, 576);
+            this.ClientSize = new System.Drawing.Size(842, 525);
             this.Controls.Add(this.lblOperacion);
             this.Controls.Add(this.guna2Panel1);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CitasForm";
             this.Text = "CitasForm";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
@@ -734,7 +704,6 @@
         private System.Windows.Forms.Label label13;
         private Guna.UI2.WinForms.Guna2TextBox txtMotivo;
         private System.Windows.Forms.Label label16;
-        private System.Windows.Forms.Label label15;
         private Guna.UI2.WinForms.Guna2Button btnCitasProgramadas;
         private Guna.UI2.WinForms.Guna2RadioButton rbConfirmada;
         private Guna.UI2.WinForms.Guna2RadioButton rbPendiente;

@@ -1,5 +1,7 @@
+using Guna.UI2.WinForms;
 using Sistema.Clases;
 using Sistema.Clases.ClasesCitas;
+using Sistema.FormLoginMenu;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -23,6 +25,7 @@ namespace Sistema.Formularios.FormPacientes
             rbInactivos.Text   = "Pendiente";
             rbActivos.Text = "Confirmada";
             lblOperacion.Visible = false;
+            rbInactivos.Checked= true;
             CargarDatos();
         }
 
