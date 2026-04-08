@@ -20,3 +20,4 @@ C:\Users\Brayan\source\repos\Programa-Citas-Odontologicas\Sistema\obj\Debug\Sist
 C:\Users\Brayan\source\repos\Programa-Citas-Odontologicas\Sistema\obj\Debug\Sistema.csproj.Up2Date
 C:\Users\Brayan\source\repos\Programa-Citas-Odontologicas\Sistema\obj\Debug\Sistema.exe
 C:\Users\Brayan\source\repos\Programa-Citas-Odontologicas\Sistema\obj\Debug\Sistema.pdb
+C:\Users\Brayan\source\repos\Programa-Citas-Odontologicas\Sistema\obj\Debug\Sistema.Formularios.FormRecepView.ViewRecepcion.resources

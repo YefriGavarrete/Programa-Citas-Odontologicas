@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Sistema.Formularios.FormRecepView;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;

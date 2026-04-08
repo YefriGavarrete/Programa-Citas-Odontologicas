@@ -3,12 +3,12 @@
   "WorkspaceRootPath": "C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\sistema\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|c:\\users\\brayan\\source\\repos\\programa-citas-odontologicas\\sistema\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
       "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\app.config||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|c:\\users\\brayan\\source\\repos\\programa-citas-odontologicas\\sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\menuform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+      "AbsoluteMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|c:\\users\\brayan\\source\\repos\\programa-citas-odontologicas\\sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F31D2126-5165-4404-9400-01F6E3DE0C50}|Sistema\\Sistema.csproj|solutionrelative:sistema\\formularios\\formloginmenu\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,13 +23,13 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MenuForm.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
-              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs",
-              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\MenuForm.cs [Dise\u00F1o]",
+              "Title": "LoginForm.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "RelativeDocumentMoniker": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs",
+              "ToolTip": "C:\\Users\\Brayan\\source\\repos\\Programa-Citas-Odontologicas\\Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Sistema\\Formularios\\FormLoginMenu\\LoginForm.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-07T23:27:22.876Z",
+              "WhenOpened": "2026-04-08T03:54:52.044Z",
               "EditorCaption": " [Dise\u00F1o]"
             },
             {
@@ -42,7 +42,7 @@
               "RelativeToolTip": "Sistema\\App.config",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000601|",
-              "WhenOpened": "2026-04-07T05:37:07.344Z",
+              "WhenOpened": "2026-04-08T03:54:39.421Z",
               "EditorCaption": ""
             }
           ]

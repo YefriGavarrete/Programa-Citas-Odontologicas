@@ -268,7 +268,8 @@ namespace Sistema.Clases.ClasesCitas
                 string sql = @"SELECT Id_Dentista,
                                       Nombre,
                                       Apellido,
-                                      (Nombre + ' ' + Apellido) AS NombreCompleto
+                                      (Nombre + ' ' + Apellido) AS NombreCompleto,
+                                      Especialidad
                                FROM   Dentistas
                                WHERE  Estado = 'Activo'";
 
