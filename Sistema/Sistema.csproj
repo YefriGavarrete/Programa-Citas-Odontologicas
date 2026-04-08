@@ -115,6 +115,12 @@
     <Compile Include="Formularios\FormPacientes\PacientesForm.Designer.cs">
       <DependentUpon>PacientesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Formularios\FormRecepView\ViewRecepcion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Formularios\FormRecepView\ViewRecepcion.Designer.cs">
+      <DependentUpon>ViewRecepcion.cs</DependentUpon>
+    </Compile>
     <Compile Include="Formularios\FormUsuarios\FormCrearUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormPacientes\PacientesForm.resx">
       <DependentUpon>PacientesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Formularios\FormRecepView\ViewRecepcion.resx">
+      <DependentUpon>ViewRecepcion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Formularios\FormUsuarios\FormCrearUsuarios.resx">
       <DependentUpon>FormCrearUsuarios.cs</DependentUpon>

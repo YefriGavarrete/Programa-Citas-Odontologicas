@@ -3,6 +3,7 @@ using Sistema.Clases.ClasesCitas;
 using Sistema.Formularios;
 using Sistema.Formularios.FormDentistas;
 using Sistema.Formularios.FormPacientes;
+using Sistema.Formularios.FormRecepView;
 using Sistema.Formularios.FormUsuarios;
 using System;
 using System.Drawing;
@@ -22,9 +23,9 @@ namespace Sistema.FormLoginMenu
             InitializeComponent();
             MarcarBotonActivo(btnInicioMenu);
 
-            lblUsuario.Text = $"{UsuarioLogeado.Nombre} {UsuarioLogeado.Apellido}  —  {UsuarioLogeado.Rol}";
+            lblUsuario.Text = $"{UsuarioLogeado.Nombre} {UsuarioLogeado.Apellido} - {UsuarioLogeado.Rol}";
         }
-        void AbrirFormEnPanel(Form form)
+        public void AbrirFormEnPanel(Form form)
         {
             if (panelContenedor.Controls.Count > 0)
                 panelContenedor.Controls.RemoveAt(0);
@@ -88,8 +89,16 @@ namespace Sistema.FormLoginMenu
 
         private void btnDentistas_Click(object sender, EventArgs e)
         {
-            AbrirFormEnPanel(new DentistasForm());
-            this.BeginInvoke((Action)(() => MarcarBotonActivo(btnDentistas)));
+            if (UsuarioLogeado.Rol == "Recepcionista")
+            {
+                AbrirFormEnPanel(new ViewRecepcion());
+                this.BeginInvoke((Action)(() => MarcarBotonActivo(btnDentistas)));
+            }
+            else
+            {
+                AbrirFormEnPanel(new DentistasForm());
+                this.BeginInvoke((Action)(() => MarcarBotonActivo(btnDentistas)));
+            }
         }
 
         private void btnEspecialidades_Click(object sender, EventArgs e)
@@ -132,11 +141,20 @@ namespace Sistema.FormLoginMenu
             m = 0;
         }
 
+        private void btnDentistasEspecialidades_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void MenuForm_Load(object sender, EventArgs e)
         {
             // Recepcionistas no pueden gestionar usuarios
             if (UsuarioLogeado.Rol == "Recepcionista")
+            {
                 btnUsuarios.Visible = false;
+                btnEspecialidades.Visible = false;
+                btnDentistas.Text = "Lista Dentistas";
+            }                
         }
         private void inicoToolStripMenuItem_Click(object sender, EventArgs e)
         {

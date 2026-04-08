@@ -17,6 +17,7 @@ namespace Sistema.Formularios.FormDentistas
         public EspecialidadesForm()
         {
             InitializeComponent();
+            lblOperacion.Visible = false;
             MostrarEspecialidad("Activo");
             rbActivos.Checked = true;
         }
@@ -79,7 +80,8 @@ namespace Sistema.Formularios.FormDentistas
                     Al.Realizado("Los datos se actualizaron con exito");
                     MostrarEspecialidad("Activo");
                     Limpiar();
-                   //btnActualizar.Visible = false;
+                    lblOperacion.Visible = false;
+                    //btnActualizar.Visible = false;
                     btnActualizar.Enabled = false;
                     btnGuardar.Visible = true;
                     btnGuardar.Enabled = true;
@@ -113,6 +115,7 @@ namespace Sistema.Formularios.FormDentistas
                 if (filas > 0)
                 {
                     Al.Realizado("La especialidad se eliminó correctamente.");
+                    lblOperacion.Visible = false;
                     MostrarEspecialidad("Activo");
                     Limpiar();
 
@@ -142,6 +145,12 @@ namespace Sistema.Formularios.FormDentistas
             DataTable dt = con.Buscar("Especialidad", columnas, condicion);
             dgvEspecialidad.DataSource = dt;
             dgvEspecialidad.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dgvEspecialidad.Columns.Count >= 2)
+            {
+                dgvEspecialidad.Columns["Id_Especialidad"].Visible = false;
+            }
+
             dgvEspecialidad.Refresh();
         }
         void Limpiar()
@@ -181,6 +190,7 @@ namespace Sistema.Formularios.FormDentistas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Limpiar();
+            lblOperacion.Visible = false;
             btnGuardar.Enabled = true;
             btnGuardar.Visible = true;
             btnActualizar.Enabled = false;

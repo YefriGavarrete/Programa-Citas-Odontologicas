@@ -227,6 +227,16 @@ namespace Sistema.Formularios.FormPacientes
             {
                 DataTable dt = controladorCitas.MostrarCitasPorEstado(estado);
                 dgvDatos.DataSource = (dt != null && dt.Rows.Count > 0) ? dt : null;
+
+
+                // Ocultar las primeras 2 columnas
+                if (dgvDatos.Columns.Count >= 3)
+                {
+                    dgvDatos.Columns["Id_Cita"].Visible = false;
+                    dgvDatos.Columns["Id_Dentista"].Visible = false;
+                    dgvDatos.Columns["Id_Paciente"].Visible = false;
+                }
+
                 dgvDatos.Refresh();
             }
             catch (Exception ex)
@@ -300,6 +310,15 @@ namespace Sistema.Formularios.FormPacientes
         {
             if (rbActivos.Checked) {
                 FiltrarCitasPorEstado("Confirmada");
+            }
+        }
+
+        private void cmbDentista_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbDentista.SelectedItem != null)
+            {
+                DataRowView fila = (DataRowView)cmbDentista.SelectedItem;
+                txtMotivo.Text = fila["Especialidad"].ToString();
             }
         }
     }

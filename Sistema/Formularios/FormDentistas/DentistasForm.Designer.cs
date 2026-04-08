@@ -330,7 +330,7 @@
             this.lblOperacion.AutoSize = true;
             this.lblOperacion.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblOperacion.ForeColor = System.Drawing.Color.DodgerBlue;
-            this.lblOperacion.Location = new System.Drawing.Point(687, 3);
+            this.lblOperacion.Location = new System.Drawing.Point(699, 3);
             this.lblOperacion.Name = "lblOperacion";
             this.lblOperacion.Size = new System.Drawing.Size(82, 18);
             this.lblOperacion.TabIndex = 100;

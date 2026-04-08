@@ -139,6 +139,12 @@ namespace Sistema.Formularios.FormUsuarios
                 }
                 dgvDatos.DataSource = dt;
                 dgvDatos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+                if (dgvDatos.Columns.Count >= 2)
+                {
+                    dgvDatos.Columns["Id_User"].Visible = false;
+                }
+
                 dgvDatos.Refresh();
             }
             catch (Exception ex)

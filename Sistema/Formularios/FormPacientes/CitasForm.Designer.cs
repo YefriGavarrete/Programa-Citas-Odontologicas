@@ -131,7 +131,7 @@
             this.btnCancelar.HoverState.BorderColor = System.Drawing.Color.White;
             this.btnCancelar.HoverState.FillColor = System.Drawing.Color.LightCoral;
             this.btnCancelar.HoverState.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(587, 205);
+            this.btnCancelar.Location = new System.Drawing.Point(661, 205);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(101, 34);
             this.btnCancelar.TabIndex = 91;
@@ -146,7 +146,7 @@
             this.btnGuardar.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Bold);
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
             this.btnGuardar.HoverState.FillColor = System.Drawing.Color.RoyalBlue;
-            this.btnGuardar.Location = new System.Drawing.Point(480, 205);
+            this.btnGuardar.Location = new System.Drawing.Point(554, 205);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(101, 34);
             this.btnGuardar.TabIndex = 90;
@@ -563,6 +563,7 @@
             this.cmbDentista.Name = "cmbDentista";
             this.cmbDentista.Size = new System.Drawing.Size(189, 36);
             this.cmbDentista.TabIndex = 97;
+            this.cmbDentista.SelectedIndexChanged += new System.EventHandler(this.cmbDentista_SelectedIndexChanged);
             // 
             // label7
             // 

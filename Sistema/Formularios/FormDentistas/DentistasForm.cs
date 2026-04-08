@@ -22,6 +22,7 @@ namespace Sistema.Formularios.FormDentistas
             InitializeComponent();
             MostrarDentistas("Activo");
             CargarCB();
+            lblOperacion.Visible = false;
             lblOperacion.Text = "Agregando";
             rbActivos.Checked = true;
         }
@@ -80,6 +81,7 @@ namespace Sistema.Formularios.FormDentistas
                 AL.Realizado($"El Dentista {MO.Nombre} se registro con éxito");
                 MostrarDentistas("Activo");
                 Limpiar();
+                lblOperacion.Visible = false;
                 lblOperacion.Text = "Agregando";
                 btnGuardar.Text = "Guardar";
             }
@@ -112,7 +114,9 @@ namespace Sistema.Formularios.FormDentistas
                 if (con.update("Dentistas", columnas, condicion) > 0)
                 {
                     Al.Realizado("Los datos se actualizaron con exito");
+                    lblOperacion.Visible = false;
                     MostrarDentistas("Activo");
+                    rbActivos.Checked = true;
                     Limpiar();
                   //  btnActualizar.Visible = false;
                   //  btnActualizar.Enabled = false;
@@ -214,6 +218,7 @@ namespace Sistema.Formularios.FormDentistas
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             Limpiar();
+            lblOperacion.Visible = false;
             lblOperacion.Text = "Agregando";
             btnGuardar.Text = "Guardar";
             // btnGuardar.Enabled = true;
@@ -239,6 +244,7 @@ namespace Sistema.Formularios.FormDentistas
 
         private void dgbDentista_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            lblOperacion.Visible = true;
             lblOperacion.Text = "Actualizando";
             btnGuardar.Text = "Actualizar";
             //btnGuardar.Enabled = false;
